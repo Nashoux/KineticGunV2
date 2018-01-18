@@ -8,6 +8,16 @@ public class CineticGunV2 : MonoBehaviour {
 
 	#region sons
 	[FMODUnity.EventRef]
+	public string Gun_Lock;
+
+	FMOD.Studio.EventInstance Gun_Lock_Event;
+
+	[FMODUnity.EventRef]
+	public string Gun_Unlock;
+
+	FMOD.Studio.EventInstance Gun_Unlock_Event;
+
+	[FMODUnity.EventRef]
 	public string Gun_Absorbe_Energie;
 
 	FMOD.Studio.EventInstance Gun_Absorbe_Energie_Event;
@@ -63,7 +73,6 @@ public class CineticGunV2 : MonoBehaviour {
 	[SerializeField] float[] viseurEnd;
 	float viseurMax = 0;
 
-
 	float lastInputTrigger = 0;
 
 	void Start () {
@@ -76,6 +85,8 @@ public class CineticGunV2 : MonoBehaviour {
 		Gun_Don_Energie_Event = FMODUnity.RuntimeManager.CreateInstance (Gun_Don_Energie);
 		Gun_Absorbe_Direction_Event = FMODUnity.RuntimeManager.CreateInstance (Gun_Absorbe_Direction);
 		Gun_Don_Direction_Event = FMODUnity.RuntimeManager.CreateInstance (Gun_Don_Direction);
+		Gun_Lock_Event = FMODUnity.RuntimeManager.CreateInstance (Gun_Lock);
+		Gun_Unlock_Event = FMODUnity.RuntimeManager.CreateInstance (Gun_Unlock);
 
 		//myMask = ~myMask;
 	}
@@ -239,6 +250,7 @@ public class CineticGunV2 : MonoBehaviour {
 
 		if (Input.GetMouseButtonDown (2) || Input.GetKeyDown(KeyCode.JoystickButton9) ) {
 			if (blockLock == null) {
+				Gun_Lock_Event.start();
 				RaycastHit hit; 
 				if (Physics.Raycast (transform.position, Camera.main.transform.TransformDirection (Vector3.forward), out hit, Mathf.Infinity, myMask) && hit.collider.GetComponent<BlockAlreadyMovingV2> ()) {
 					//rb.useGravity = false;
@@ -246,13 +258,13 @@ public class CineticGunV2 : MonoBehaviour {
 				}
 
 			} else {
-				
+				Gun_Unlock_Event.start();
 				blockLock = null;
 
-				RaycastHit hit; 
-				if (Physics.Raycast (transform.position, Camera.main.transform.TransformDirection (Vector3.forward), out hit, Mathf.Infinity, myMask) &&  hit.collider.GetComponent<BlockAlreadyMovingV2> ()) {
-					blockLock = hit.collider.GetComponent<BlockAlreadyMovingV2> ();
-				}
+//				RaycastHit hit; 
+//				if (Physics.Raycast (transform.position, Camera.main.transform.TransformDirection (Vector3.forward), out hit, Mathf.Infinity, myMask) &&  hit.collider.GetComponent<BlockAlreadyMovingV2> ()) {
+//					blockLock = hit.collider.GetComponent<BlockAlreadyMovingV2> ();
+//				}
 			}
 		}
 		#endregion
