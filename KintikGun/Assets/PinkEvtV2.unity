@@ -19179,12 +19179,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.07, y: 0.07, z: 0.0002}
   m_Center: {x: -0.0000009542756, y: 0, z: 0.0012609403}
---- !u!114 &917263255 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114929619602728250, guid: 6a2ef8cb62c61254d9da1f9c0ff875bc,
-    type: 2}
-  m_PrefabInternal: {fileID: 266219081}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &919665948
 Prefab:
   m_ObjectHideFlags: 0
@@ -19367,22 +19361,22 @@ Prefab:
         type: 2}
       propertyPath: viseurObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 1637827443}
+      objectReference: {fileID: 1864068604}
     - target: {fileID: 114605348340395112, guid: 934a1e1d605fdae468e75fd6fe846f5b,
         type: 2}
       propertyPath: viseurObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 895493453}
+      objectReference: {fileID: 984067982}
     - target: {fileID: 114605348340395112, guid: 934a1e1d605fdae468e75fd6fe846f5b,
         type: 2}
       propertyPath: viseurObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 984067982}
+      objectReference: {fileID: 895493453}
     - target: {fileID: 114605348340395112, guid: 934a1e1d605fdae468e75fd6fe846f5b,
         type: 2}
       propertyPath: viseurObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 917263255}
+      objectReference: {fileID: 1637827443}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 934a1e1d605fdae468e75fd6fe846f5b, type: 2}
   m_IsPrefabParent: 0
@@ -41031,6 +41025,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1864068604 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114975434465933674, guid: 6a2ef8cb62c61254d9da1f9c0ff875bc,
+    type: 2}
+  m_PrefabInternal: {fileID: 266219081}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1866831118 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 5489e524ebfdbbd4cbe41c26624b98d2, type: 3}
