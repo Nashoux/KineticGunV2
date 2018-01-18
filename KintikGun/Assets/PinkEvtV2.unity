@@ -6109,6 +6109,7 @@ GameObject:
   - component: {fileID: 277333069}
   - component: {fileID: 277333068}
   - component: {fileID: 277333072}
+  - component: {fileID: 277333073}
   m_Layer: 0
   m_Name: RigidBodyFPSController
   m_TagString: Untagged
@@ -6170,7 +6171,7 @@ CapsuleCollider:
     type: 2}
   m_PrefabInternal: {fileID: 926758876}
   m_GameObject: {fileID: 277333067}
-  m_Material: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -6219,6 +6220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jump: "event:/Saut_lev\xE9e"
+  jump_Down: event:/Saut_retombe
   speed: 9
   m_MouseLook:
     XSensitivity: 2
@@ -6235,6 +6237,18 @@ MonoBehaviour:
   grounded: 0
   myGun: {fileID: 277333068}
   newVelocity: {x: 0, y: 0, z: 0}
+--- !u!114 &277333073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 277333067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1 &280752710 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100492, guid: 8cd08cb6d7a4fc846a664c1e403eb416, type: 3}
@@ -19890,6 +19904,18 @@ Prefab:
     - target: {fileID: 5400000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
       propertyPath: m_Mass
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 13600000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
+      propertyPath: m_Interpolate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400004, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 2}
@@ -47567,7 +47593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/AMBIANCE
+  Event: event:/AMBIANCE_desert
   PlayEvent: 1
   StopEvent: 0
   CollisionTag: 

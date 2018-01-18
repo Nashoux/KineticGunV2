@@ -29,11 +29,13 @@
             <destination>{59c5bdc2-0463-4c8e-8b50-aa56a9c542ee}</destination>
             <destination>{4763d2ce-cfb8-4d65-82f2-0c7fef17ddd8}</destination>
             <destination>{9c16aba3-3bf5-4c60-9342-9aa7e4a6508c}</destination>
-            <destination>{f5270448-8c75-47ca-a0af-3979592cef6e}</destination>
             <destination>{89d0d611-0eef-471c-9a12-dd1cae79af50}</destination>
         </relationship>
         <relationship name="timeline">
             <destination>{67905a32-ed0f-4dbf-88ba-13991b0c0e48}</destination>
+        </relationship>
+        <relationship name="banks">
+            <destination>{c925ab17-333c-4c01-904a-abae53e4a5f2}</destination>
         </relationship>
     </object>
     <object class="EventMixer" id="{dfe9cff9-e6af-415b-82b9-75e8e6b4b6bc}">
@@ -80,14 +82,6 @@
             <destination>{69b46604-bcb9-4dc6-a1c4-e896d162ae9e}</destination>
         </relationship>
     </object>
-    <object class="GroupTrack" id="{f5270448-8c75-47ca-a0af-3979592cef6e}">
-        <relationship name="modules">
-            <destination>{67303188-cac1-4ae1-8021-8816ec266d2e}</destination>
-        </relationship>
-        <relationship name="mixerGroup">
-            <destination>{e9981823-bb8b-49a8-88f0-5df377bac2bf}</destination>
-        </relationship>
-    </object>
     <object class="GroupTrack" id="{89d0d611-0eef-471c-9a12-dd1cae79af50}">
         <relationship name="modules">
             <destination>{cd4263d4-f365-408c-8166-d7725dfc5681}</destination>
@@ -100,7 +94,6 @@
         <relationship name="modules">
             <destination>{e0218675-0634-4f67-ac64-f2bdfd86a937}</destination>
             <destination>{870736b5-dad5-4d55-8512-1991ea97acbd}</destination>
-            <destination>{67303188-cac1-4ae1-8021-8816ec266d2e}</destination>
             <destination>{cd4263d4-f365-408c-8166-d7725dfc5681}</destination>
         </relationship>
         <relationship name="markers">
@@ -201,31 +194,6 @@
         </relationship>
         <relationship name="panner">
             <destination>{ce0fd597-583a-4bb7-b315-9828d8026bc1}</destination>
-        </relationship>
-        <relationship name="output">
-            <destination>{1a593690-a44d-4add-b248-4ba657d93c78}</destination>
-        </relationship>
-    </object>
-    <object class="PluginSound" id="{67303188-cac1-4ae1-8021-8816ec266d2e}">
-        <property name="length">
-            <value>12.625</value>
-        </property>
-        <relationship name="plugin">
-            <destination>{47c89526-5974-4ecf-a26d-568aaf0809ba}</destination>
-        </relationship>
-    </object>
-    <object class="EventMixerGroup" id="{e9981823-bb8b-49a8-88f0-5df377bac2bf}">
-        <property name="volume">
-            <value>4.5</value>
-        </property>
-        <property name="name">
-            <value>Random_Rock</value>
-        </property>
-        <relationship name="effectChain">
-            <destination>{71ccaa10-3a44-4866-8c4a-c765a32c9135}</destination>
-        </relationship>
-        <relationship name="panner">
-            <destination>{7db1647c-7eab-4715-a82a-0f08de538f8b}</destination>
         </relationship>
         <relationship name="output">
             <destination>{1a593690-a44d-4add-b248-4ba657d93c78}</destination>
@@ -332,24 +300,6 @@
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{ce0fd597-583a-4bb7-b315-9828d8026bc1}"/>
-    <object class="Plugin" id="{47c89526-5974-4ecf-a26d-568aaf0809ba}">
-        <property name="identifier">
-            <value>AudioGaming AudioWeather</value>
-        </property>
-        <relationship name="pluginParameters">
-            <destination>{136d29f8-1565-435d-b9ed-69c1268a9969}</destination>
-            <destination>{95d9e2c7-c499-4517-8ee8-a4e17a7548b0}</destination>
-            <destination>{975cd42c-14cc-4b8f-b6ac-eac38858825b}</destination>
-            <destination>{82e48202-1b74-4ff7-8844-9e9395b2be11}</destination>
-            <destination>{f0980373-b8f2-4af6-8e0d-ea65cf595909}</destination>
-        </relationship>
-    </object>
-    <object class="MixerBusEffectChain" id="{71ccaa10-3a44-4866-8c4a-c765a32c9135}">
-        <relationship name="effects">
-            <destination>{47ecb14b-5891-4e06-99ec-d07e19384708}</destination>
-        </relationship>
-    </object>
-    <object class="MixerBusPanner" id="{7db1647c-7eab-4715-a82a-0f08de538f8b}"/>
     <object class="SingleSound" id="{8d85aa80-051d-4464-a2a5-9a1364035c81}">
         <property name="volume">
             <value>-23.5</value>
@@ -483,67 +433,5 @@
         </property>
     </object>
     <object class="MixerBusFader" id="{7e2acde9-78c2-44a9-8100-60358158a214}"/>
-    <object class="FloatPluginParameter" id="{136d29f8-1565-435d-b9ed-69c1268a9969}">
-        <property name="name">
-            <value>Wind</value>
-        </property>
-        <property name="curve">
-            <value>LinearCurveStrategy{(0.000000,0.000000)(1.000000,100.000000)}</value>
-        </property>
-        <property name="value">
-            <value>66.5</value>
-        </property>
-    </object>
-    <object class="FloatPluginParameter" id="{95d9e2c7-c499-4517-8ee8-a4e17a7548b0}">
-        <property name="name">
-            <value>Rain</value>
-        </property>
-        <property name="curve">
-            <value>LinearCurveStrategy{(0.000000,0.000000)(1.000000,100.000000)}</value>
-        </property>
-        <property name="value">
-            <value>0</value>
-        </property>
-    </object>
-    <object class="FloatPluginParameter" id="{975cd42c-14cc-4b8f-b6ac-eac38858825b}">
-        <property name="name">
-            <value>Volume</value>
-        </property>
-        <property name="curve">
-            <value>LinearPiecewiseCurveStrategy{(-42.000000,-80.000000)(-39.000000,-60.000000)(-36.000000,-50.000000)(-32.000000,-40.000000)(-27.000000,-30.000000)(-20.000000,-20.000000)(-10.000000,-10.000000)(0.000000,0.000000)(10.000000,10.000000)}</value>
-        </property>
-        <property name="value">
-            <value>-22.5</value>
-        </property>
-    </object>
-    <object class="IntPluginParameter" id="{82e48202-1b74-4ff7-8844-9e9395b2be11}">
-        <property name="name">
-            <value>Weather Type</value>
-        </property>
-        <property name="minimumValue">
-            <value>0</value>
-        </property>
-        <property name="maximumValue">
-            <value>14</value>
-        </property>
-        <property name="value">
-            <value>3</value>
-        </property>
-    </object>
-    <object class="IntPluginParameter" id="{f0980373-b8f2-4af6-8e0d-ea65cf595909}">
-        <property name="name">
-            <value>Format</value>
-        </property>
-        <property name="minimumValue">
-            <value>0</value>
-        </property>
-        <property name="maximumValue">
-            <value>4</value>
-        </property>
-        <property name="value">
-            <value>1</value>
-        </property>
-    </object>
-    <object class="MixerBusFader" id="{47ecb14b-5891-4e06-99ec-d07e19384708}"/>
     <object class="MixerBusFader" id="{7a9511fa-2f93-472a-8600-0fd885ea523e}"/>
 </objects>
