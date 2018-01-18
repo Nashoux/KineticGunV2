@@ -36,15 +36,18 @@ void Update(){
 		myMat.SetFloat ("_BoundsUp", _BoundsUp );
 		myMat.SetFloat ("_BoundsDown", _BoundsDown);
 
-		if (energie <= 10f) {
+		if (energie < 0f) {
 			energie = 0f;
 		}
 
-		float energieNew = energie / 20;
-		energieNew= Mathf.Log10 (energieNew)*3;
+		float energieNew = energie / 20f;
+		energieNew= Mathf.Log10 (energieNew)*3f;
+		if (energieNew < 0) {
+			energieNew = 0;
+		}
 
 		myMat.SetFloat("_Size1", energieNew);
-		myMat.SetFloat("_Size2", energieNew*70/100);
+		myMat.SetFloat("_Size2", energieNew*70f/100f);
 
 		myMat.SetFloat ("_fillPourcent", energie / maxEnergie*2 -1);
 
@@ -70,8 +73,8 @@ rb.velocity = velocity;
 			direction = col.contacts [0].normal.normalized;
 		}
 		if (col.gameObject.tag == "destructible"){
-			if (energie > maxEnergie / 2) {
-				col.gameObject.GetComponent<Rigidbody> ().mass = 10;
+			if (energie > maxEnergie / 2f) {
+				col.gameObject.GetComponent<Rigidbody> ().mass = 10f;
 			} else {
 				direction = col.contacts [0].normal.normalized;
 			}
