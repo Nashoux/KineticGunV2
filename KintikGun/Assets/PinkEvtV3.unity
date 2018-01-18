@@ -3577,12 +3577,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a2ef8cb62c61254d9da1f9c0ff875bc, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &134324355 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114929619602728250, guid: 6a2ef8cb62c61254d9da1f9c0ff875bc,
-    type: 2}
-  m_PrefabInternal: {fileID: 134324354}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &134324356 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114698034377989080, guid: 6a2ef8cb62c61254d9da1f9c0ff875bc,
@@ -22675,6 +22669,12 @@ Transform:
   m_Father: {fileID: 1392496970}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 179.98201, z: 0}
+--- !u!114 &636800700 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114975434465933674, guid: 6a2ef8cb62c61254d9da1f9c0ff875bc,
+    type: 2}
+  m_PrefabInternal: {fileID: 134324354}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &645236647
 GameObject:
   m_ObjectHideFlags: 0
@@ -43507,22 +43507,22 @@ Prefab:
         type: 2}
       propertyPath: viseurObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 134324358}
+      objectReference: {fileID: 636800700}
     - target: {fileID: 114605348340395112, guid: 934a1e1d605fdae468e75fd6fe846f5b,
         type: 2}
       propertyPath: viseurObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 134324357}
+      objectReference: {fileID: 134324356}
     - target: {fileID: 114605348340395112, guid: 934a1e1d605fdae468e75fd6fe846f5b,
         type: 2}
       propertyPath: viseurObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 134324356}
+      objectReference: {fileID: 134324357}
     - target: {fileID: 114605348340395112, guid: 934a1e1d605fdae468e75fd6fe846f5b,
         type: 2}
       propertyPath: viseurObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 134324355}
+      objectReference: {fileID: 134324358}
     - target: {fileID: 54016647744756282, guid: 934a1e1d605fdae468e75fd6fe846f5b,
         type: 2}
       propertyPath: m_Mass
@@ -73321,6 +73321,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2098172476}
+  - component: {fileID: 2098172477}
   m_Layer: 0
   m_Name: Master
   m_TagString: Untagged
@@ -73341,6 +73342,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2098172477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2098172475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/AMBIANCE_desert
+  PlayEvent: 1
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &2099712069 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100008, guid: 33533202433de334f91c3727ee83dc9f, type: 3}

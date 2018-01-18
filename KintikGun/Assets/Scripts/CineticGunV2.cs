@@ -89,7 +89,7 @@ public class CineticGunV2 : MonoBehaviour {
 
 	float lastInputTrigger = 0;
 
-	float castSize = 0.7f;
+	[SerializeField] float castSize = 0.5f;
 
 	void Start () {
 
