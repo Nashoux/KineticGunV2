@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{8169d1e5-ebc6-0dd1-3d2e-53cdec514c52}">
+        <property name="name">
+            <value>Energ_Orient</value>
+        </property>
+        <relationship name="folder">
+            <destination>{a52b784a-491b-4679-a3be-67e98dd43f1f}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{c16d1745-634c-4ed6-8a8d-90771eda8ff3}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{c16d1745-634c-4ed6-8a8d-90771eda8ff3}">
+        <property name="isExposedRecursively">
+            <value>false</value>
+        </property>
+    </object>
+</objects>
