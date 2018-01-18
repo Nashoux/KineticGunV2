@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{def7fb22-6516-4c23-872b-5dc9c2c5fcd2}">
+        <property name="assetPath">
+            <value>Absorbe_Orientation.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>3.3258956916099773</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{ff932534-f909-46e6-a047-bfc6f36ea720}</destination>
+        </relationship>
+    </object>
+</objects>

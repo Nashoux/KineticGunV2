@@ -90,7 +90,10 @@
     <object class="MixerBusPanner" id="{acba4ed3-496d-48b7-8c97-f06864e4ae90}"/>
     <object class="SingleSound" id="{a32f8aa1-1cc7-4078-ae5a-68db1c2943b2}">
         <property name="length">
-            <value>1.0717460317460317</value>
+            <value>0.42364300688828993</value>
+        </property>
+        <property name="pitch">
+            <value>17</value>
         </property>
         <property name="looping">
             <value>true</value>
@@ -100,6 +103,9 @@
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{cb929c40-d164-4375-aa12-f248b866391b}">
+        <property name="volume">
+            <value>-8</value>
+        </property>
         <property name="name">
             <value>Audio 1</value>
         </property>
@@ -115,6 +121,7 @@
     </object>
     <object class="MixerBusEffectChain" id="{f2044daa-3a86-4944-bf95-3200392e552d}">
         <relationship name="effects">
+            <destination>{e6b47af4-af08-4782-978c-d4e34af0b295}</destination>
             <destination>{bbd37057-7f78-42bc-b12e-e71baa9ce364}</destination>
         </relationship>
     </object>
@@ -126,6 +133,7 @@
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{756818fb-db73-4dcd-acb4-9df42df3e8b2}"/>
+    <object class="SFXReverbEffect" id="{e6b47af4-af08-4782-978c-d4e34af0b295}"/>
     <object class="MixerBusFader" id="{bbd37057-7f78-42bc-b12e-e71baa9ce364}"/>
     <object class="MixerBusFader" id="{ab9ec6a5-6472-4ea3-a56b-d886854146f9}"/>
 </objects>

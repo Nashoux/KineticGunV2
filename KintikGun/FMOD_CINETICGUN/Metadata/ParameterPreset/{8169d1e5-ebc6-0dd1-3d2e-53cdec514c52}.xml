@@ -5,7 +5,7 @@
             <value>Energ_Orient</value>
         </property>
         <relationship name="folder">
-            <destination>{a52b784a-491b-4679-a3be-67e98dd43f1f}</destination>
+            <destination>{92f2b55e-d1d7-40e1-8963-40170955b6e5}</destination>
         </relationship>
         <relationship name="parameter">
             <destination>{c16d1745-634c-4ed6-8a8d-90771eda8ff3}</destination>
