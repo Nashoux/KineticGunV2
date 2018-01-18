@@ -5,7 +5,7 @@
             <value>Gun_Don_Energie</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>1</value>
         </property>
         <relationship name="folder">
             <destination>{8b0be67b-a91f-43ac-a004-0bc3a36767a9}</destination>
@@ -218,7 +218,6 @@
     <object class="MixerBusEffectChain" id="{596efd6e-a1db-4551-8054-7dadb4a200eb}">
         <relationship name="effects">
             <destination>{3dc7cded-f927-4035-ae55-6d609aa46456}</destination>
-            <destination>{45d091c6-2eab-4935-bac7-b7d275091364}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{3d783e4f-8120-4808-b1c7-ab14b591a194}"/>
@@ -268,7 +267,6 @@
     </object>
     <object class="MixerBusPanner" id="{bf634095-9edf-403d-b4f1-bdff39d92f34}"/>
     <object class="MixerBusFader" id="{3dc7cded-f927-4035-ae55-6d609aa46456}"/>
-    <object class="SpatialiserEffect" id="{45d091c6-2eab-4935-bac7-b7d275091364}"/>
     <object class="MixerBusFader" id="{06197f49-fd84-4b5c-90a3-9806d10ab0a6}"/>
     <object class="SFXReverbEffect" id="{35dae3cf-76f8-4500-987d-8f7a4fa8a8b0}"/>
     <object class="AutomationPoint" id="{6591c321-d2d1-43aa-8790-97c43d50ac6e}">

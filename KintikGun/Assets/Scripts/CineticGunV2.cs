@@ -7,6 +7,18 @@ using UnityEngine.UI;
 public class CineticGunV2 : MonoBehaviour {
 
 	#region sons
+
+	[FMODUnity.EventRef]
+	public string Gun_Max_Energie;
+
+	FMOD.Studio.EventInstance Gun_Max_Energie_Event;
+
+	[FMODUnity.EventRef]
+	public string Gun_Min_Energie;
+
+	FMOD.Studio.EventInstance Gun_Min_Energie_Event;
+
+
 	[FMODUnity.EventRef]
 	public string Gun_Lock;
 
@@ -87,6 +99,9 @@ public class CineticGunV2 : MonoBehaviour {
 		Gun_Don_Direction_Event = FMODUnity.RuntimeManager.CreateInstance (Gun_Don_Direction);
 		Gun_Lock_Event = FMODUnity.RuntimeManager.CreateInstance (Gun_Lock);
 		Gun_Unlock_Event = FMODUnity.RuntimeManager.CreateInstance (Gun_Unlock);
+		Gun_Max_Energie_Event = FMODUnity.RuntimeManager.CreateInstance (Gun_Max_Energie);
+		Gun_Min_Energie_Event = FMODUnity.RuntimeManager.CreateInstance (Gun_Min_Energie);
+
 
 		//myMask = ~myMask;
 	}
@@ -99,31 +114,12 @@ public class CineticGunV2 : MonoBehaviour {
 		viseurObjects [3].fillAmount = viseurBegin [3] + myEnergie / myEnergieMax*4 - 3;
 
 
+	
+
+
+
 		#region direction
 		//Prendre une force
-		RaycastHit hita; 
-		if (Physics.Raycast (transform.position, Camera.main.transform.TransformDirection (Vector3.forward), out hita, Mathf.Infinity, myMask) && hita.collider.GetComponent<BlockAlreadyMovingV2> () && lastPlateformSeen != hita.collider.gameObject) { 
-			if(lastParticuleDirection!= null){
-				lastParticuleDirection.GetComponent<ParticleSystem>().Stop();
-				Destroy(lastParticuleDirection,6);
-			}
-			lastPlateformSeen = hita.collider.gameObject;
-			lastParticuleDirection = Instantiate<GameObject>(ParticulesDirection);
-			lastParticuleDirection.transform.position = lastPlateformSeen.transform.position;
-			lastParticuleDirection.transform.LookAt (lastParticuleDirection.transform.position+hita.collider.GetComponent<BlockAlreadyMovingV2>().direction);
-			lastParticuleDirection.transform.parent = lastPlateformSeen.transform;
-		}else if ( !Physics.Raycast (transform.position, Camera.main.transform.TransformDirection (Vector3.forward), out hita, Mathf.Infinity, myMask)){
-			lastPlateformSeen = null;
-			if(lastParticuleDirection != null){
-				lastParticuleDirection.GetComponent<ParticleSystem>().Stop();
-				Destroy(lastParticuleDirection,6);
-		}
-		}else{
-				lastPlateformSeen = hita.collider.gameObject;
-			}
-
-
-
 
 		if (Input.GetKey (KeyCode.Joystick1Button5) || Input.GetMouseButtonDown (1)) {
 			RaycastHit hit; 
@@ -170,29 +166,34 @@ public class CineticGunV2 : MonoBehaviour {
 		bool isTackingEnergie = false;
 		if ( Input.GetKey (KeyCode.Joystick1Button4)|| Input.GetKey (KeyCode.A) ) {
 			RaycastHit energiseHit;
-			if (Physics.Raycast (transform.position, Camera.main.transform.TransformDirection (Vector3.forward), out energiseHit, Mathf.Infinity, myMask) && energiseHit.collider.GetComponent<BlockAlreadyMovingV2> () && myEnergie < myEnergieMax) {
+			if (Physics.Raycast (transform.position, Camera.main.transform.TransformDirection (Vector3.forward), out energiseHit, Mathf.Infinity, myMask) && energiseHit.collider.GetComponent<BlockAlreadyMovingV2> ()  ) {
+				if(myEnergie < myEnergieMax){
+					if(energiseHit.collider.GetComponent<BlockAlreadyMovingV2> ().energie>0){
 
-				if(energiseHit.collider.GetComponent<BlockAlreadyMovingV2> ().energie>0){
+						if (energiseTake && ( Input.GetKeyDown (KeyCode.Joystick1Button4) || Input.GetKeyDown (KeyCode.A) )) {
+							myEnergie += energiseHit.collider.GetComponent<BlockAlreadyMovingV2> ().energie;
+							energiseHit.collider.GetComponent<BlockAlreadyMovingV2> ().energie = 0;
+							lastParticuleAspiration.GetComponent<ParticleSystem>().Emit((int)myEnergie/3);
+							isTackingEnergie = false;
+						} else {
+							if(Input.GetKeyDown (KeyCode.Joystick1Button4)|| Input.GetKeyDown (KeyCode.A) || lastPlateformSeen != energiseHit.collider.gameObject){
+								Gun_Absorbe_Energie_Event.start();
+								lastParticuleAspiration = Instantiate<GameObject>(ParticulesAspiration);
+								lastParticuleAspiration.GetComponent<particleAttractorLinear>().target = this.transform;
+								lastParticuleAspiration.transform.parent = energiseHit.collider.transform;
+								lastParticuleAspiration.transform.position = energiseHit.collider.transform.position;
 
-					if (energiseTake && ( Input.GetKeyDown (KeyCode.Joystick1Button4) || Input.GetKeyDown (KeyCode.A) )) {
-						myEnergie += energiseHit.collider.GetComponent<BlockAlreadyMovingV2> ().energie;
-						energiseHit.collider.GetComponent<BlockAlreadyMovingV2> ().energie = 0;
-						lastParticuleAspiration.GetComponent<ParticleSystem>().Emit((int)myEnergie/3);
-						isTackingEnergie = false;
-					} else {
-						if(Input.GetKeyDown (KeyCode.Joystick1Button4)|| Input.GetKeyDown (KeyCode.A) ){
-							
-							lastParticuleAspiration = Instantiate<GameObject>(ParticulesAspiration);
-							lastParticuleAspiration.GetComponent<particleAttractorLinear>().target = this.transform;
-							lastParticuleAspiration.transform.parent = energiseHit.collider.transform;
-							lastParticuleAspiration.transform.position = energiseHit.collider.transform.position;
-
-							energiseTake = true;
-							energiseTakeTimer = 0.8f;
-						}
-						isTackingEnergie = true;
-						energiseHit.collider.GetComponent<BlockAlreadyMovingV2> ().energie -= 3;
-						myEnergie += 3;
+								energiseTake = true;
+								energiseTakeTimer = 0.8f;
+							}
+							isTackingEnergie = true;
+							energiseHit.collider.GetComponent<BlockAlreadyMovingV2> ().energie -= 3;
+							myEnergie += 3;
+						}				
+					}
+				}else{
+					if(Input.GetKeyDown (KeyCode.Joystick1Button4) || Input.GetKeyDown (KeyCode.A)){
+						Gun_Min_Energie_Event.start();
 					}
 				}
 			}
@@ -224,12 +225,17 @@ public class CineticGunV2 : MonoBehaviour {
 					hit.collider.GetComponent<BlockAlreadyMovingV2> ().energie += myEnergie;
 					myEnergie = 0;
 					} else {
-						if (lastInputTrigger <= 0.09f  || Input.GetKeyDown (KeyCode.E)){
+						if (lastInputTrigger <= 0.09f  || Input.GetKeyDown (KeyCode.E) || lastPlateformSeen != hit.collider.gameObject){
+							Gun_Don_Energie_Event.start();
 							energiseGift = true;
 							energiseGiftTimer = 0.8f;
 						}
 						hit.collider.GetComponent<BlockAlreadyMovingV2> ().energie += 3;
 						myEnergie -= 3;
+					}
+				}else{
+					if(lastInputTrigger <= 0.09f  || Input.GetKeyDown (KeyCode.E)){
+						Gun_Min_Energie_Event.start();
 					}
 				}
 			}
@@ -242,8 +248,30 @@ public class CineticGunV2 : MonoBehaviour {
 		lastInputTrigger = triger1;
 
 
-
 		#endregion
+
+
+		RaycastHit hita; 
+		if (Physics.Raycast (transform.position, Camera.main.transform.TransformDirection (Vector3.forward), out hita, Mathf.Infinity, myMask) && hita.collider.GetComponent<BlockAlreadyMovingV2> () && lastPlateformSeen != hita.collider.gameObject) { 
+			if(lastParticuleDirection!= null){
+				lastParticuleDirection.GetComponent<ParticleSystem>().Stop();
+				Destroy(lastParticuleDirection,6);
+			}
+			lastPlateformSeen = hita.collider.gameObject;
+			lastParticuleDirection = Instantiate<GameObject>(ParticulesDirection);
+			lastParticuleDirection.transform.position = lastPlateformSeen.transform.position;
+			lastParticuleDirection.transform.LookAt (lastParticuleDirection.transform.position+hita.collider.GetComponent<BlockAlreadyMovingV2>().direction);
+			lastParticuleDirection.transform.parent = lastPlateformSeen.transform;
+		}else if ( !Physics.Raycast (transform.position, Camera.main.transform.TransformDirection (Vector3.forward), out hita, Mathf.Infinity, myMask)){
+			lastPlateformSeen = null;
+			if(lastParticuleDirection != null){
+				lastParticuleDirection.GetComponent<ParticleSystem>().Stop();
+				Destroy(lastParticuleDirection,6);
+			}
+		}else{
+			lastPlateformSeen = hita.collider.gameObject;
+		}
+
 
 		#region Lock
 		// Système de lock

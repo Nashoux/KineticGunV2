@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class BlockAlreadyMovingV2 : MonoBehaviour {
 
+	bool collided = false;
+
 
 float maxEnergie = 200;
 
@@ -63,6 +65,9 @@ rb.velocity = velocity;
 
 
 	void OnCollisionEnter(Collision col){
+		if (!collided) {
+			collided = true;
+		}
 
 		if (col.gameObject.GetComponent<BlockAlreadyMovingV2> ()) {
 			if (energie > maxEnergie / 2) {

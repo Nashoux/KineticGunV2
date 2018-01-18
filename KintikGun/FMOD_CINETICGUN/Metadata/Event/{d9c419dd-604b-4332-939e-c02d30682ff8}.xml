@@ -5,7 +5,7 @@
             <value>Gun_Absorbe_Energie</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>1</value>
         </property>
         <relationship name="folder">
             <destination>{8b0be67b-a91f-43ac-a004-0bc3a36767a9}</destination>
@@ -242,7 +242,6 @@
     <object class="MixerBusEffectChain" id="{d2813d94-596c-441e-9bf6-eef4aca29f80}">
         <relationship name="effects">
             <destination>{eb104def-3a1d-4e92-84fb-f3d5a1ac9f38}</destination>
-            <destination>{7537182b-505d-4d95-9c1c-c42f6f7f6c30}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{1bcc515d-6a23-4d97-b241-8deeb4a28351}"/>
@@ -288,7 +287,6 @@
     </object>
     <object class="MixerBusPanner" id="{d00abd0c-6c78-4523-8926-ad263f3bc09d}"/>
     <object class="MixerBusFader" id="{eb104def-3a1d-4e92-84fb-f3d5a1ac9f38}"/>
-    <object class="SpatialiserEffect" id="{7537182b-505d-4d95-9c1c-c42f6f7f6c30}"/>
     <object class="MixerBusFader" id="{ec6dad02-6a82-4941-93b4-72956b1b0e85}"/>
     <object class="MixerBusFader" id="{124c94ae-c08b-485d-a5c4-2f90965d35f4}"/>
     <object class="MixerBusFader" id="{2fbb7568-58a6-493d-b7b2-68ac19a8824b}"/>
