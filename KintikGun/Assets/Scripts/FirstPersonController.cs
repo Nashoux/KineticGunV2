@@ -129,6 +129,10 @@ using Random = UnityEngine.Random;
         }
 
 	void OnCollisionEnter(Collision col){
+
+
+
+
 		if (col.contacts [0].normal.y > -0.1f) {
 			if (!collided) {
 				jump_Down_Event.start ();
@@ -138,6 +142,8 @@ using Random = UnityEngine.Random;
 	}
 
 	void OnCollisionStay(Collision col){
+
+
 
 		if (col.contacts [0].normal.y > -0.1f) {
 			m_Jump = false;

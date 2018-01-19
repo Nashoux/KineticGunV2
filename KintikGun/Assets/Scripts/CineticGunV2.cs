@@ -73,6 +73,7 @@ public class CineticGunV2 : MonoBehaviour {
 	public GameObject[] myDirectionGo = new GameObject[2];
 
 	[SerializeField] GameObject directionVectorSign;
+	Vector3 directionGyro;
 
 	GameObject lastParticuleAspiration;
 	GameObject lastParticuleAspirationGive;
@@ -92,7 +93,6 @@ public class CineticGunV2 : MonoBehaviour {
 	[SerializeField] float castSize = 0.5f;
 
 	void Start () {
-
 	
 
 		//myForces = new BlockMove.Force (new Vector3(1,0,0), new Vector3( transform.rotation.x, transform.rotation.y, transform.rotation.z) , 0.5f);
@@ -106,6 +106,12 @@ public class CineticGunV2 : MonoBehaviour {
 		Gun_Max_Energie_Event = FMODUnity.RuntimeManager.CreateInstance (Gun_Max_Energie);
 		Gun_Min_Energie_Event = FMODUnity.RuntimeManager.CreateInstance (Gun_Min_Energie);
 
+		myDirectionGo[0] = (GameObject)Instantiate(myGameObbject);
+		myDirectionGo [0].transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
+		myDirectionGo[1] = (GameObject)Instantiate(myGameObbject);
+		myDirectionGo [1].transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
+
+
 
 		//myMask = ~myMask;
 	}
@@ -117,8 +123,12 @@ public class CineticGunV2 : MonoBehaviour {
 		viseurObjects [2].fillAmount = viseurBegin [2] + myEnergie / myEnergieMax*4 - 2;
 		viseurObjects [3].fillAmount = viseurBegin [3] + myEnergie / myEnergieMax*4 - 3;
 
+		//Vector3 direction = Vector3.Normalize (new Vector3 (myDirectionGo [1].transform.position.x - myDirectionGo [0].transform.position.x, myDirectionGo [1].transform.position.y - myDirectionGo [0].transform.position.y, myDirectionGo [1].transform.position.z - myDirectionGo [0].transform.position.z));
+		//Debug.Log (direction);
+		directionGyro = Vector3.Normalize( new Vector3 ( myDirectionGo [1].transform.position.x - myDirectionGo [0].transform.position.x,  myDirectionGo [1].transform.position.y - myDirectionGo [0].transform.position.y , myDirectionGo [1].transform.position.z - myDirectionGo [0].transform.position.z));
 
-	
+		directionVectorSign.transform.LookAt (directionVectorSign.transform.position+directionGyro,Vector3.forward);
+			
 
 
 
@@ -143,6 +153,8 @@ public class CineticGunV2 : MonoBehaviour {
 
 				myDirectionGo [0].transform.parent = transform.GetChild (0).transform;
 				myDirectionGo [1].transform.parent = transform.GetChild (0).transform;
+
+				directionGyro = Vector3.Normalize( new Vector3 ( myDirectionGo [1].transform.position.x - myDirectionGo [0].transform.position.x,  myDirectionGo [1].transform.position.y - myDirectionGo [0].transform.position.y , myDirectionGo [1].transform.position.z - myDirectionGo [0].transform.position.z));
 			}
 		}
 
@@ -345,6 +357,10 @@ public class CineticGunV2 : MonoBehaviour {
 		
 	//	directionVectorSign.transform.rotation =   Quaternion.Euler ( new Vector3 ((-myForce.direction.y )*180,  (-myForce.direction.z )*180, (myForce.direction.x )*180 ));
 
+	}
+
+	void OnDrawGizmos(){
+		Gizmos.DrawLine (directionVectorSign.transform.position, directionGyro*10 + directionVectorSign.transform.position);
 	}
 	
 
