@@ -101,7 +101,7 @@
                 fixed3 lighting = i.diff * shadow + i.ambient;
 
 				if(i.normal.y < _fillPourcent){ //check if the normal is fill or not
-					col.rgb += _ColorFill.rgb;
+					//col.rgb += _ColorFill.rgb;
 					col.rgb /=2;
 					col.rgb *= lighting;
 				}else{
