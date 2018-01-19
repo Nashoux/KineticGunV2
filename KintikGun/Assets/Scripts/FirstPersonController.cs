@@ -13,6 +13,11 @@ using Random = UnityEngine.Random;
 
 	FMOD.Studio.EventInstance jump_Event;
 
+	[FMODUnity.EventRef]
+	public string jump_Down;
+
+	FMOD.Studio.EventInstance jump_Down_Event;
+
 	[SerializeField] private float speed;
     public MouseLook m_MouseLook;
 		
@@ -25,6 +30,8 @@ using Random = UnityEngine.Random;
     private Vector3 m_OriginalCameraPosition;
 	private Rigidbody rb;
 
+	bool collided = false;
+
 
 		public bool grounded = false;
 		[SerializeField] CineticGunV2 myGun;
@@ -35,7 +42,7 @@ using Random = UnityEngine.Random;
         private void Start(){
 
 		jump_Event = FMODUnity.RuntimeManager.CreateInstance (jump);
-
+		jump_Down_Event = FMODUnity.RuntimeManager.CreateInstance (jump_Down);
 		
 			rb = GetComponent<Rigidbody> ();
 
@@ -121,6 +128,15 @@ using Random = UnityEngine.Random;
             m_MouseLook.LookRotation (transform, m_Camera.transform);
         }
 
+	void OnCollisionEnter(Collision col){
+		if (col.contacts [0].normal.y > -0.1f) {
+			if (!collided) {
+				jump_Down_Event.start ();
+				collided = true;
+			}
+		}
+	}
+
 	void OnCollisionStay(Collision col){
 
 		if (col.contacts [0].normal.y > -0.1f) {
@@ -136,6 +152,7 @@ using Random = UnityEngine.Random;
 	}
 
 	void OnCollisionExit(){
+		collided = false;
 		newVelocity = new Vector3 (0, 0, 0);
 		grounded = false;
 	}
