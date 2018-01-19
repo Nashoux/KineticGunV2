@@ -101,13 +101,16 @@
         <property name="length">
             <value>0.47900226757369613</value>
         </property>
+        <relationship name="fadeInCurve">
+            <destination>{e74a5f1c-19dc-4da4-9f75-541c25a7fef4}</destination>
+        </relationship>
         <relationship name="audioFile">
             <destination>{cecc727a-3802-4c14-bb27-bea869273c97}</destination>
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{18ac0d60-1331-4d50-8054-d3406b0b9713}">
         <property name="volume">
-            <value>10</value>
+            <value>-18.5</value>
         </property>
         <property name="name">
             <value>Audio 1</value>
@@ -143,6 +146,14 @@
     </object>
     <object class="MixerBusPanner" id="{5013c860-854f-45d1-8756-ab8ed9b8f4d1}"/>
     <object class="MixerBusFader" id="{4dc70225-6cdf-4312-9d9f-d16e304aae7d}"/>
+    <object class="FadeCurve" id="{e74a5f1c-19dc-4da4-9f75-541c25a7fef4}">
+        <relationship name="startPoint">
+            <destination>{4896e0d9-c1c3-4351-9818-96f573c3744b}</destination>
+        </relationship>
+        <relationship name="endPoint">
+            <destination>{c6e4a3e6-2d31-43cf-8c23-8b601079f71a}</destination>
+        </relationship>
+    </object>
     <object class="MixerBusEffectChain" id="{b1ba8035-db45-4fc1-b3a6-2052a8843664}">
         <relationship name="effects">
             <destination>{4d4799b2-3bf7-4fcf-a71c-e538279bb072}</destination>
@@ -157,6 +168,25 @@
     </object>
     <object class="MixerBusPanner" id="{9797ac49-a358-4a36-bc26-8ab1ae44f014}"/>
     <object class="MixerBusFader" id="{d971f3ae-151b-4f71-ad70-df2e7d896ebc}"/>
+    <object class="AutomationPoint" id="{4896e0d9-c1c3-4351-9818-96f573c3744b}">
+        <property name="position">
+            <value>0</value>
+        </property>
+        <property name="value">
+            <value>0</value>
+        </property>
+        <property name="curveShape">
+            <value>-0.2547189</value>
+        </property>
+    </object>
+    <object class="AutomationPoint" id="{c6e4a3e6-2d31-43cf-8c23-8b601079f71a}">
+        <property name="position">
+            <value>0.10000000000000001</value>
+        </property>
+        <property name="value">
+            <value>1</value>
+        </property>
+    </object>
     <object class="SFXReverbEffect" id="{4d4799b2-3bf7-4fcf-a71c-e538279bb072}">
         <property name="decayTime">
             <value>180</value>
