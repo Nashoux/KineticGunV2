@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Pink_Evt
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 9939e68848ffa92458e3113bc7170ba2, type: 3}
   m_ShaderKeywords: _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -39,7 +39,7 @@ Material:
         m_Scale: {x: 20, y: 20}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 11cfdfdf84ec0bb4ea97aed46ed45477, type: 3}
+        m_Texture: {fileID: 2800000, guid: 829d7a66168737942a0953922f705c05, type: 3}
         m_Scale: {x: 20, y: 20}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -55,22 +55,42 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AuraPower1: 1.49
+    - _AuraPower2: 1
+    - _BoundsDown: 0
+    - _BoundsUp: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _Frequency1: 1
+    - _Frequency2: 1
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
+    - _IsWaveActive: 1
     - _Metallic: 0.478
     - _Mode: 0
+    - _NormalCheck1: 0.5
+    - _NormalCheck2: 0.5
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Scale1: 1
+    - _Scale2: 1
+    - _Size1: 1.5
+    - _Size2: 1.5
     - _SmoothnessTextureChannel: 1
     - _SpecularHighlights: 1
+    - _Speed1: 1
+    - _Speed2: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _Wiggle: 2
     - _ZWrite: 1
+    - _fillPourcent: -1
     m_Colors:
-    - _Color: {r: 0.6764706, g: 0.39792386, b: 0.40368685, a: 1}
+    - _Color: {r: 0.66176474, g: 0.3228284, b: 0.1703071, a: 1}
+    - _Color1: {r: 1, g: 1, b: 1, a: 1}
+    - _Color2: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorFill: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
