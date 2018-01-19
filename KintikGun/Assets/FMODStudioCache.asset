@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114810191329070790}
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   EditorEvents:
   - {fileID: 114756076085892200}
   - {fileID: 114788675410811268}
@@ -33,11 +33,26 @@ MonoBehaviour:
   - {fileID: 114460813263713400}
   - {fileID: 114659270545325402}
   - {fileID: 114475087333027014}
-  MasterBankRef: {fileID: 114410214048422776}
+  MasterBankRef: {fileID: 114166199091325188}
   StringsBankRef: {fileID: 114810191329070790}
-  stringsBankWriteTime: 636518969849129228
+  stringsBankWriteTime: 636519893819947834
   cacheVersion: 2
 --- !u!114 &114002894812359648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Energ_Orient
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114070659929804868
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -66,7 +81,7 @@ MonoBehaviour:
   Path: event:/Saut_retombe
   guid: 663b5283f160344e8299f3ef289dbca2
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -123,6 +138,25 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114166199091325188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Document\Unity powa\Kinetika\KintikGun\FMOD_CINETICGUN\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636519893819932790
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3528256
+  Exists: 1
 --- !u!114 &114202759226286770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +190,7 @@ MonoBehaviour:
   Path: event:/Energie_Stocked
   guid: 6cec75647544f5489737f134129a260b
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -178,14 +212,14 @@ MonoBehaviour:
   Path: event:/Gun_UnLock
   guid: 798fd690406f8840bc13b1da9f5382fd
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 940
+  Length: 340
 --- !u!114 &114240048487285326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,12 +272,12 @@ MonoBehaviour:
   Path: event:/objetDansLeViseur
   guid: 3f06b4c82212b149a565d132a5fe89f0
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114611566502652646}
+  - {fileID: 114643335579897324}
   MinDistance: 0
   MaxDistance: 0
   Length: 1850
@@ -265,7 +299,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 3528480
-  Exists: 1
+  Exists: 0
 --- !u!114 &114440476682383178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,7 +344,7 @@ MonoBehaviour:
   Path: event:/Gun_Absorbe_Energie
   guid: dd19c4d94b603243939ec02d30682ff8
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -332,7 +366,7 @@ MonoBehaviour:
   Path: event:/AMBIANCE_desert
   guid: e512cee23ad5ca4e97572b4db9bc4d7d
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -394,7 +428,7 @@ MonoBehaviour:
   Path: event:/GrosDeplacement
   guid: c5d6d14879ac094d83e99cf05518c9da
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -416,7 +450,7 @@ MonoBehaviour:
   Path: event:/Nouvelle Orientation
   guid: 72b96480bd6aad40aca94f715684770e
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -438,7 +472,7 @@ MonoBehaviour:
   Path: event:/Jauge_Energie_MAX
   guid: 6f79cf3813884841bc3e1c69a0ca59d8
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -460,7 +494,7 @@ MonoBehaviour:
   Path: event:/Gun_Absorbe_Orientation
   guid: aec6f5359ea21b4586c53fea77f9c793
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -468,6 +502,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1811
+--- !u!114 &114602433519778716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Energ_Orient
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114610407238632644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,7 +531,7 @@ MonoBehaviour:
   Path: event:/Gun_Don_Energie
   guid: c1f3ef97af84a748ab3ee904cfa94371
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -534,7 +583,7 @@ MonoBehaviour:
   Path: event:/Gun_FinDon
   guid: d345560f898e5545b7cec27a53164d65
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -542,6 +591,36 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 437
+--- !u!114 &114643335579897324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Energ_Orient
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114646515201836242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Energ_Orient
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114659270545325402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,7 +635,7 @@ MonoBehaviour:
   Path: event:/AMBIANCE
   guid: f7baa4f33464644bb0a4083e7aec738b
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -578,7 +657,7 @@ MonoBehaviour:
   Path: event:/Gun_Don_Orientation
   guid: 5b9e25728a4ae6419a3340676f24f4ec
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -600,7 +679,7 @@ MonoBehaviour:
   Path: "event:/Saut_lev\xE9e"
   guid: b8be8c5dd72f4248b7bf3d87b654f6b1
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -637,7 +716,7 @@ MonoBehaviour:
   Path: event:/MoyenDeplacement
   guid: 620e38cd591a6b4d9ba2e34f86f83764
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -659,7 +738,7 @@ MonoBehaviour:
   Path: event:/Jauge_Energie_MIN
   guid: 0cc2f0dac8bb6c419f31ad2d26b2d8bb
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -681,7 +760,7 @@ MonoBehaviour:
   Path: event:/Gun_Lock
   guid: 31a1d96fdd69ec4a8c0296fd38c06177
   Banks:
-  - {fileID: 114410214048422776}
+  - {fileID: 114166199091325188}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -701,9 +780,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD_CINETICGUN\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636518969849129228
+  lastModified: 636519893819947834
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1534
   Exists: 1
+--- !u!114 &114975239754446420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Energ_Orient
+  Min: 0
+  Max: 1
+  Default: 0
