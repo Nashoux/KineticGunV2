@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1b2df7b8d49db8747a6ee774853d327d
-timeCreated: 1516389792
+timeCreated: 1516405201
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -88,7 +88,7 @@ SubstanceImporter:
           offset: {x: 0, y: 0}
       - _MainTex:
           texture: {instanceID: 0}
-          scale: {x: 3, y: 3}
+          scale: {x: 5, y: 5}
           offset: {x: 0, y: 0}
       - _MetallicGlossMap:
           texture: {instanceID: 0}
@@ -120,7 +120,7 @@ SubstanceImporter:
       - _UVSec: 0
       - _ZWrite: 1
       colors:
-      - _Color: {r: 0.47794116, g: 0.33610994, b: 0.20734212, a: 1}
+      - _Color: {r: 0.85294116, g: 0.6659169, b: 0.56444633, a: 1}
       - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     textureParameters:
     - name: ground_medieval_pavement_basecolor
@@ -151,7 +151,7 @@ SubstanceImporter:
     textureAssignments:
     - shaderProp: _MainTex
       material: {instanceID: 0}
-      baseUID: 3114307531
+      baseUID: 3114307171
     - shaderProp: _BumpMap
       material: {instanceID: 0}
       baseUID: 3114307537
