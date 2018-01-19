@@ -2,7 +2,11 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{e2ce12e5-d53a-4eca-9757-2b4db9bc4d7d}">
         <relationship name="selectables">
+<<<<<<< .merge_file_a07036
+            <destination>{e0218675-0634-4f67-ac64-f2bdfd86a937}</destination>
+=======
             <destination>{3566c989-4802-4ef8-af8a-26e43761790e}</destination>
+>>>>>>> .merge_file_a04492
         </relationship>
         <relationship name="uiLastParameterSelection">
             <destination>{67905a32-ed0f-4dbf-88ba-13991b0c0e48}</destination>

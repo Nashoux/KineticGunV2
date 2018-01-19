@@ -12,6 +12,32 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
+<<<<<<< .merge_file_a08952
+  - {fileID: 114159824119105346}
+  - {fileID: 114667791563483678}
+  EditorEvents:
+  - {fileID: 114934934667245300}
+  - {fileID: 114504499241639474}
+  - {fileID: 114511452784436760}
+  - {fileID: 114038884817744048}
+  - {fileID: 114885837983464252}
+  - {fileID: 114397255661987256}
+  - {fileID: 114828599967122872}
+  - {fileID: 114524453117851516}
+  - {fileID: 114079989369208318}
+  - {fileID: 114705240734647088}
+  - {fileID: 114751898673895756}
+  - {fileID: 114080605965746128}
+  - {fileID: 114033705057534164}
+  - {fileID: 114064902131361006}
+  - {fileID: 114697604953262314}
+  - {fileID: 114529664120780858}
+  - {fileID: 114652550665819118}
+  - {fileID: 114320919327341912}
+  MasterBankRef: {fileID: 114667791563483678}
+  StringsBankRef: {fileID: 114159824119105346}
+  stringsBankWriteTime: 636518921821697222
+=======
   - {fileID: 114585362395071594}
   - {fileID: 114991496249630242}
   EditorEvents:
@@ -36,6 +62,7 @@ MonoBehaviour:
   MasterBankRef: {fileID: 114991496249630242}
   StringsBankRef: {fileID: 114585362395071594}
   stringsBankWriteTime: 636518989991514394
+>>>>>>> .merge_file_a09016
   cacheVersion: 2
 --- !u!114 &114039582023255624
 MonoBehaviour:
@@ -45,6 +72,108 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< .merge_file_a08952
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Gun_UnLock
+  guid: 798fd690406f8840bc13b1da9f5382fd
+  Banks:
+  - {fileID: 114737398993564214}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114033705057534164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Energie_Stocked
+  guid: 6cec75647544f5489737f134129a260b
+  Banks:
+  - {fileID: 114667791563483678}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &114038884817744048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/MoyenDeplacement
+  guid: 620e38cd591a6b4d9ba2e34f86f83764
+  Banks:
+  - {fileID: 114667791563483678}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2194
+--- !u!114 &114062252380748444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\fxyac\Desktop\KineticHunter_TEST\FMOD_CINETICGUN\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636517281260000000
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 224544
+  Exists: 1
+--- !u!114 &114064902131361006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Gun_Absorbe_Orientation
+  guid: aec6f5359ea21b4586c53fea77f9c793
+  Banks:
+  - {fileID: 114667791563483678}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1811
+--- !u!114 &114079989369208318
+=======
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -53,6 +182,7 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114042066751855320
+>>>>>>> .merge_file_a09016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -66,15 +196,47 @@ MonoBehaviour:
   Path: event:/AMBIANCE_desert
   guid: e512cee23ad5ca4e97572b4db9bc4d7d
   Banks:
+<<<<<<< .merge_file_a08952
+  - {fileID: 114667791563483678}
+  IsStream: 0
+=======
   - {fileID: 114991496249630242}
   IsStream: 1
+>>>>>>> .merge_file_a09016
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< .merge_file_a08952
+  Length: 437
+--- !u!114 &114080605965746128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Saut_retombe
+  guid: 663b5283f160344e8299f3ef289dbca2
+  Banks:
+  - {fileID: 114667791563483678}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1462
+--- !u!114 &114082640232301888
+=======
   Length: 40390
 --- !u!114 &114042475928051682
+>>>>>>> .merge_file_a09016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -106,8 +268,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< .merge_file_a08952
+  Path: event:/Gun_Lock
+  guid: 31a1d96fdd69ec4a8c0296fd38c06177
+  Banks:
+  - {fileID: 114737398993564214}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 382
+--- !u!114 &114159824119105346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: FMOD_CINETICGUN\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636518921821697222
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1534
+  Exists: 1
+--- !u!114 &114193826540536976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Gun_FiniAbsorbe
+  guid: 1eb1da50980aaf46a41be070b79fa299
+=======
   Path: event:/MoyenDeplacement
   guid: 620e38cd591a6b4d9ba2e34f86f83764
+>>>>>>> .merge_file_a09016
   Banks:
   - {fileID: 114991496249630242}
   IsStream: 0
@@ -165,11 +372,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< .merge_file_a08952
+  Path: event:/Gun_Don
+  guid: 5b9e25728a4ae6419a3340676f24f4ec
+  Banks:
+  - {fileID: 114737398993564214}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114320919327341912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/AMBIANCE_desert
+  guid: e512cee23ad5ca4e97572b4db9bc4d7d
+  Banks:
+  - {fileID: 114667791563483678}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 12625
+--- !u!114 &114335316065710754
+=======
   Name: Energ_Orient
   Min: 0
   Max: 1
   Default: 0
 --- !u!114 &114089639606776214
+>>>>>>> .merge_file_a09016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -220,7 +464,11 @@ MonoBehaviour:
   Path: event:/Jauge_Energie_MIN
   guid: 0cc2f0dac8bb6c419f31ad2d26b2d8bb
   Banks:
+<<<<<<< .merge_file_a08952
+  - {fileID: 114667791563483678}
+=======
   - {fileID: 114991496249630242}
+>>>>>>> .merge_file_a09016
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -286,15 +534,24 @@ MonoBehaviour:
   Path: event:/Gun_Absorbe_Energie
   guid: dd19c4d94b603243939ec02d30682ff8
   Banks:
+<<<<<<< .merge_file_a08952
+  - {fileID: 114667791563483678}
+=======
   - {fileID: 114991496249630242}
+>>>>>>> .merge_file_a09016
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< .merge_file_a08952
+  Length: 125
+--- !u!114 &114511452784436760
+=======
   Length: 3375
 --- !u!114 &114379449887447824
+>>>>>>> .merge_file_a09016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -308,16 +565,58 @@ MonoBehaviour:
   Path: event:/objetDansLeViseur
   guid: 3f06b4c82212b149a565d132a5fe89f0
   Banks:
+<<<<<<< .merge_file_a08952
+  - {fileID: 114667791563483678}
+=======
   - {fileID: 114991496249630242}
+>>>>>>> .merge_file_a09016
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
+<<<<<<< .merge_file_a08952
+  - {fileID: 114544049287436882}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1850
+--- !u!114 &114513083036043484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Energ_Orient
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114522771382711306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Energ_Orient
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114524453117851516
+=======
   - {fileID: 114079152809615190}
   MinDistance: 0
   MaxDistance: 0
   Length: 1850
 --- !u!114 &114384702290730464
+>>>>>>> .merge_file_a09016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -331,15 +630,83 @@ MonoBehaviour:
   Path: event:/Nouvelle Orientation
   guid: 72b96480bd6aad40aca94f715684770e
   Banks:
+<<<<<<< .merge_file_a08952
+  - {fileID: 114667791563483678}
+=======
   - {fileID: 114991496249630242}
+>>>>>>> .merge_file_a09016
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< .merge_file_a08952
+  Length: 4127
+--- !u!114 &114529664120780858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Gun_Don_Energie
+  guid: c1f3ef97af84a748ab3ee904cfa94371
+  Banks:
+  - {fileID: 114667791563483678}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1902
+--- !u!114 &114544049287436882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Energ_Orient
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114583948788923382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Gun_Absorbe_Energie
+  guid: dd19c4d94b603243939ec02d30682ff8
+  Banks:
+  - {fileID: 114737398993564214}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2343
+--- !u!114 &114595865840005706
+=======
   Length: 1133
 --- !u!114 &114386480619841562
+>>>>>>> .merge_file_a09016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -382,8 +749,87 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< .merge_file_a08952
+  Length: 1071
+--- !u!114 &114617663376114570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: FMOD_CINETICGUN\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636517281242821602
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1378
+  Exists: 1
+--- !u!114 &114652550665819118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/AMBIANCE
+  guid: f7baa4f33464644bb0a4083e7aec738b
+  Banks:
+  - {fileID: 114667791563483678}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 30040
+--- !u!114 &114667791563483678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\Utilisateur\Pictures\CineticGun\A_UNITY\Repos_V5\KintikGun\FMOD_CINETICGUN\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636518921821657217
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1868736
+  Exists: 1
+--- !u!114 &114689769210986558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Energ_Orient
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114692806779776540
+=======
   Length: 125
 --- !u!114 &114413021187077276
+>>>>>>> .merge_file_a09016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -404,8 +850,13 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< .merge_file_a08952
+  Length: 1133
+--- !u!114 &114697604953262314
+=======
   Length: 1811
 --- !u!114 &114483735329108058
+>>>>>>> .merge_file_a09016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -416,8 +867,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< .merge_file_a08952
+  Path: "event:/Saut_lev\xE9e"
+  guid: b8be8c5dd72f4248b7bf3d87b654f6b1
+  Banks:
+  - {fileID: 114667791563483678}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 479
+--- !u!114 &114705240734647088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Gun_Absorbe_Energie
+  guid: dd19c4d94b603243939ec02d30682ff8
+  Banks:
+  - {fileID: 114667791563483678}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3375
+--- !u!114 &114724086414338992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/colisionEntreObjets
+  guid: 3c228d69ede128478f0271fbf895f356
+=======
   Path: event:/GrosDeplacement
   guid: c5d6d14879ac094d83e99cf05518c9da
+>>>>>>> .merge_file_a09016
   Banks:
   - {fileID: 114991496249630242}
   IsStream: 0
@@ -464,7 +964,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3528480
   Exists: 1
+<<<<<<< .merge_file_a08952
+--- !u!114 &114751898673895756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Gun_Don_Orientation
+  guid: 5b9e25728a4ae6419a3340676f24f4ec
+  Banks:
+  - {fileID: 114667791563483678}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1811
+--- !u!114 &114792723238040506
+=======
 --- !u!114 &114750586364597696
+>>>>>>> .merge_file_a09016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -519,7 +1045,33 @@ MonoBehaviour:
   Path: event:/Gun_UnLock
   guid: 798fd690406f8840bc13b1da9f5382fd
   Banks:
+<<<<<<< .merge_file_a08952
+  - {fileID: 114667791563483678}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 940
+--- !u!114 &114833578815523700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Gun_Don
+  guid: 5b9e25728a4ae6419a3340676f24f4ec
+  Banks:
+  - {fileID: 114062252380748444}
+=======
   - {fileID: 114991496249630242}
+>>>>>>> .merge_file_a09016
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -578,15 +1130,25 @@ MonoBehaviour:
   Path: event:/AMBIANCE
   guid: f7baa4f33464644bb0a4083e7aec738b
   Banks:
+<<<<<<< .merge_file_a08952
+  - {fileID: 114667791563483678}
+  IsStream: 0
+=======
   - {fileID: 114991496249630242}
   IsStream: 1
+>>>>>>> .merge_file_a09016
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< .merge_file_a08952
+  Length: 312
+--- !u!114 &114934934667245300
+=======
   Length: 30040
 --- !u!114 &114991496249630242
+>>>>>>> .merge_file_a09016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -597,6 +1159,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< .merge_file_a08952
+  Path: event:/Jauge_Energie_MIN
+  guid: 0cc2f0dac8bb6c419f31ad2d26b2d8bb
+  Banks:
+  - {fileID: 114667791563483678}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 320
+=======
   Path: D:\Document\Unity powa\Kinetika\KintikGun\FMOD_CINETICGUN\Build\Desktop\Master
     Bank.bank
   lastModified: 636518989991494586
@@ -605,3 +1180,4 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3528480
   Exists: 1
+>>>>>>> .merge_file_a09016
