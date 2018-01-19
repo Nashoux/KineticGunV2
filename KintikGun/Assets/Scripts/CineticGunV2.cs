@@ -111,8 +111,9 @@ public class CineticGunV2 : MonoBehaviour {
 		myDirectionGo[0] = (GameObject)Instantiate(myGameObbject);
 		myDirectionGo [0].transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
 		myDirectionGo[1] = (GameObject)Instantiate(myGameObbject);
-		myDirectionGo [1].transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
-
+		myDirectionGo [1].transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z+1);
+		myDirectionGo [0].transform.parent = transform.GetChild (0).transform;
+		myDirectionGo [1].transform.parent = transform.GetChild (0).transform;
 
 
 		//myMask = ~myMask;
@@ -367,9 +368,9 @@ public class CineticGunV2 : MonoBehaviour {
 
 	}
 
-//	void OnDrawGizmos(){
-//		Gizmos.DrawLine (directionVectorSign.transform.position, directionGyro*10 + directionVectorSign.transform.position);
-//	}
+	void OnDrawGizmos(){
+		Gizmos.DrawLine (directionVectorSign.transform.position, directionGyro*10 + directionVectorSign.transform.position);
+	}
 
 	IEnumerator turnLeftUi(){
 		for (int i = 0; i < 8; i++) {
