@@ -4,11 +4,6 @@
         <relationship name="selectables">
             <destination>{e0218675-0634-4f67-ac64-f2bdfd86a937}</destination>
         </relationship>
-        <relationship name="items">
-            <destination>{da933bd1-ae7f-4582-8c6c-f6b093bed93a}</destination>
-            <destination>{47d42323-141a-44ee-b2b7-71dc6c1eba7e}</destination>
-            <destination>{2c8e26de-8693-457c-889b-ba30eea3ba01}</destination>
-        </relationship>
         <relationship name="uiLastParameterSelection">
             <destination>{67905a32-ed0f-4dbf-88ba-13991b0c0e48}</destination>
         </relationship>
