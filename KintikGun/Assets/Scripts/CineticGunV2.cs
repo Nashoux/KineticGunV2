@@ -92,6 +92,8 @@ public class CineticGunV2 : MonoBehaviour {
 
 	[SerializeField] float castSize = 0.5f;
 
+	[SerializeField] GameObject TurnUi;
+
 	void Start () {
 	
 
@@ -198,7 +200,7 @@ public class CineticGunV2 : MonoBehaviour {
 
 							lastParticuleAspiration.GetComponent<ParticleSystem>().Emit((int)myEnergie/3);
 							lastParticuleAspiration.GetComponent<ParticleSystem>().Stop();
-							Destroy(lastParticuleAspiration.gameObject,2.5f);
+							Destroy(lastParticuleAspiration.gameObject,2f);
 							isTackingEnergie = false;
 						} else {
 							if(Input.GetKeyDown (KeyCode.Joystick1Button4)|| Input.GetKeyDown (KeyCode.A) || lastPlateformSeen != energiseHit.collider.gameObject){
@@ -207,7 +209,7 @@ public class CineticGunV2 : MonoBehaviour {
 								lastParticuleAspiration.GetComponent<particleAttractorLinear>().target = this.transform;
 								lastParticuleAspiration.transform.parent = energiseHit.collider.transform;
 								lastParticuleAspiration.transform.position = energiseHit.collider.transform.position;
-								Destroy(lastParticuleAspiration.gameObject,5);
+								Destroy(lastParticuleAspiration.gameObject,8);
 								energiseTake = true;
 								energiseTakeTimer = 0.8f;
 							}
@@ -323,11 +325,13 @@ public class CineticGunV2 : MonoBehaviour {
 				if (Physics.SphereCast (transform.position,castSize, Camera.main.transform.TransformDirection (Vector3.forward), out hit, Mathf.Infinity, myMask) && hit.collider.GetComponent<BlockAlreadyMovingV2> ()) {
 					//rb.useGravity = false;
 					blockLock = hit.collider.GetComponent<BlockAlreadyMovingV2> ();
+					StartCoroutine("turnLeftUi");
 				}
 
 			} else {
 				Gun_Unlock_Event.start();
 				blockLock = null;
+				StartCoroutine("turnRightUi");
 
 //				RaycastHit hit; 
 //				if (Physics.Raycast (transform.position, Camera.main.transform.TransformDirection (Vector3.forward), out hit, Mathf.Infinity, myMask) &&  hit.collider.GetComponent<BlockAlreadyMovingV2> ()) {
@@ -347,7 +351,11 @@ public class CineticGunV2 : MonoBehaviour {
 
 
 	void delock(){
-		blockLock = null;
+		if (blockLock != null) {
+			Gun_Unlock_Event.start();
+			StartCoroutine("turnRightUi");
+			blockLock = null;
+		}
 	}
 
 
@@ -359,10 +367,25 @@ public class CineticGunV2 : MonoBehaviour {
 
 	}
 
-	void OnDrawGizmos(){
-		Gizmos.DrawLine (directionVectorSign.transform.position, directionGyro*10 + directionVectorSign.transform.position);
+//	void OnDrawGizmos(){
+//		Gizmos.DrawLine (directionVectorSign.transform.position, directionGyro*10 + directionVectorSign.transform.position);
+//	}
+
+	IEnumerator turnLeftUi(){
+		for (int i = 0; i < 8; i++) {
+			TurnUi.transform.Rotate (0, 0, 10 + i*2);
+			yield return new WaitForEndOfFrame ();
+		}
+		yield return null;
 	}
-	
+
+	IEnumerator turnRightUi(){
+		for (int i = 0; i < 8; i++) {
+			TurnUi.transform.Rotate (0, 0, -10 - i*2);
+			yield return new WaitForEndOfFrame ();
+		}
+		yield return null;
+	}
 
 
 }

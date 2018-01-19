@@ -471,6 +471,7 @@ MonoBehaviour:
   - 0
   - 0
   castSize: 0.7
+  TurnUi: {fileID: 0}
 --- !u!114 &114878772487234616
 MonoBehaviour:
   m_ObjectHideFlags: 1
