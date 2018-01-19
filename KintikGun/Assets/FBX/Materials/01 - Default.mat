@@ -56,8 +56,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AuraPower: 2.39
-    - _AuraPower1: 1.35
-    - _AuraPower2: 1
+    - _AuraPower1: 0.88
+    - _AuraPower2: 0.7
     - _BoundsDown: 0
     - _BoundsUp: 0
     - _BumpScale: 1
@@ -98,7 +98,7 @@ Material:
     - isItFill: 0
     m_Colors:
     - _Color: {r: 0.2352941, g: 0.58864105, b: 1, a: 1}
-    - _Color1: {r: 0.9705882, g: 0, b: 0, a: 1}
-    - _Color2: {r: 0.9852941, g: 0.115916945, b: 0.88936317, a: 1}
+    - _Color1: {r: 0.9705882, g: 0.4852941, b: 0.7992941, a: 1}
+    - _Color2: {r: 0.9117647, g: 0.7869288, b: 0.4873225, a: 1}
     - _ColorFill: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

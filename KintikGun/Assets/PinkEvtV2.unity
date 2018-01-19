@@ -20,9 +20,9 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 900
-  m_AmbientSkyColor: {r: 0.85294116, g: 0.63343424, b: 0.82871956, a: 1}
-  m_AmbientEquatorColor: {r: 1, g: 0.80960107, b: 0.5686275, a: 1}
-  m_AmbientGroundColor: {r: 0.8088235, g: 0.29604906, b: 0.017841712, a: 1}
+  m_AmbientSkyColor: {r: 0.9558824, g: 0.81463283, b: 0.8009635, a: 1}
+  m_AmbientEquatorColor: {r: 1, g: 0.80960107, b: 0.843, a: 1}
+  m_AmbientGroundColor: {r: 0.8088235, g: 0.618976, b: 0.5159736, a: 1}
   m_AmbientIntensity: 1.56
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
@@ -34,11 +34,11 @@ RenderSettings:
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 1024
-  m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionBounces: 2
+  m_ReflectionIntensity: 0.539
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0.539}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -11304,10 +11304,10 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.608
     m_Bias: 0.05
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 0.57
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -19380,6 +19380,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 934a1e1d605fdae468e75fd6fe846f5b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &926758877 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1406951035494528, guid: 934a1e1d605fdae468e75fd6fe846f5b,
+    type: 2}
+  m_PrefabInternal: {fileID: 926758876}
+--- !u!114 &926758878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926758877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 25e315f4e3c0d474dbcef5793059b2e0, type: 2}
 --- !u!1 &928297086
 GameObject:
   m_ObjectHideFlags: 0
@@ -35320,10 +35337,10 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.74
+    m_Strength: 0.627
+    m_Bias: 0.413
     m_NormalBias: 0.98
-    m_NearPlane: 0.1
+    m_NearPlane: 0.94
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 12100000, guid: 54fbbf098d116effa00081aba8ad6659, type: 2}
