@@ -14,7 +14,7 @@ public Vector3 direction = new Vector3(0,0,0);
 
 Rigidbody rb;
 
-	Material myMat;
+	Material[] myMat;
 
 	float _BoundsUp;
 	float _BoundsDown;
@@ -23,7 +23,7 @@ void Start(){
 
 	direction = Vector3.Normalize(direction);
 	rb = GetComponent<Rigidbody>();
-	myMat = GetComponent<MeshRenderer> ().material;
+	myMat = GetComponent<MeshRenderer> ().materials;
 	Collider myCol = gameObject.AddComponent<BoxCollider> ();
 	_BoundsUp = myCol.bounds.max.y;
 	_BoundsDown = myCol.bounds.min.y;
@@ -34,8 +34,8 @@ void Start(){
 
 void Update(){
 
-		myMat.SetFloat ("_BoundsUp", _BoundsUp );
-		myMat.SetFloat ("_BoundsDown", _BoundsDown);
+
+
 
 		if (energie < 0f) {
 			energie = 0f;
@@ -47,10 +47,14 @@ void Update(){
 			energieNew = 0;
 		}
 
-		myMat.SetFloat("_Size1", energieNew);
-		myMat.SetFloat("_Size2", energieNew*70f/100f);
+		for (int i = 0; i < myMat.Length; i++) {
+			myMat[i].SetFloat ("_BoundsUp", _BoundsUp);
+			myMat[i].SetFloat ("_BoundsDown", _BoundsDown);
+			myMat[i].SetFloat("_Size1", energieNew);
+			myMat[i].SetFloat("_Size2", energieNew*70f/100f);
 
-		myMat.SetFloat ("_fillPourcent", energie / maxEnergie*2 -1);
+			//myMat[i].SetFloat ("_fillPourcent", energie / maxEnergie*2 -1);
+		}
 
 
 	
