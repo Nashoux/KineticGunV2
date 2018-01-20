@@ -33,11 +33,29 @@ MonoBehaviour:
   - {fileID: 114460813263713400}
   - {fileID: 114659270545325402}
   - {fileID: 114475087333027014}
+  - {fileID: 114458881296493246}
+  - {fileID: 114474111840446832}
+  - {fileID: 114141156504345822}
   MasterBankRef: {fileID: 114216240241581562}
   StringsBankRef: {fileID: 114810191329070790}
-  stringsBankWriteTime: 636519893819947834
+  stringsBankWriteTime: 636520188712249320
   cacheVersion: 2
 --- !u!114 &114002894812359648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Energ_Orient
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114047683161321168
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -142,6 +160,28 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3528256
   Exists: 0
+--- !u!114 &114141156504345822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Musique_Menu
+  guid: 583a756147533e4db472c9d6ecbfdd4f
+  Banks:
+  - {fileID: 114216240241581562}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 37333
 --- !u!114 &114146593731360994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,11 +285,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\Document\Unity powa\Kinetika\KintikGun\FMOD_CINETICGUN\Build\Desktop\Master
     Bank.bank
-  lastModified: 636519893819932790
+  lastModified: 636520188712223977
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 3528256
+    Value: 4136064
   Exists: 1
 --- !u!114 &114225726146466036
 MonoBehaviour:
@@ -349,7 +389,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114902168321495242}
+  - {fileID: 114047683161321168}
   MinDistance: 0
   MaxDistance: 0
   Length: 1850
@@ -402,6 +442,28 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114458881296493246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Transition2
+  guid: 2761673776df9b44a4d5842b64a6b266
+  Banks:
+  - {fileID: 114216240241581562}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 8000
 --- !u!114 &114460813263713400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,6 +486,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3375
+--- !u!114 &114474111840446832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Transition1
+  guid: 53343d1709e78d429a7b5c9d662ffa33
+  Banks:
+  - {fileID: 114216240241581562}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 8000
 --- !u!114 &114475087333027014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -867,11 +951,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD_CINETICGUN\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636519893819947834
+  lastModified: 636520188712249320
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1534
+    Value: 1674
   Exists: 1
 --- !u!114 &114818922507967856
 MonoBehaviour:
