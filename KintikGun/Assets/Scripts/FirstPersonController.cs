@@ -98,11 +98,6 @@ using Random = UnityEngine.Random;
 
 	FMOD.Studio.EventInstance music_Event;
 
-	void Start(){
-
-
-
-	}
 
         // Use this for initialization
         private void Start(){
