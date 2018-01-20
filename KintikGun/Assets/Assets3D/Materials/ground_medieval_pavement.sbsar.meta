@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1b2df7b8d49db8747a6ee774853d327d
-timeCreated: 1516407012
+timeCreated: 1516427414
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -10,7 +10,7 @@ SubstanceImporter:
     prototypeName: ground_medieval_pavement
     shaderName: 
     shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-    shaderKeywords: _METALLICGLOSSMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+    shaderKeywords: _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
     renderQueue: -1
     lightmapFlags: 4
     inputs:
