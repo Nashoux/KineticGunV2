@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/PinkEvtV3.unity
-    guid: 71bb450d1b1f04d4b80b74903b430242
-  - enabled: 1
     path: Assets/MenuStart.unity
     guid: f44666857245564478d99284e12596f8
+  - enabled: 1
+    path: Assets/PinkEvtV3.unity
+    guid: 71bb450d1b1f04d4b80b74903b430242
