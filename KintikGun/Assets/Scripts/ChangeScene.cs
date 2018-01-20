@@ -6,6 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour {
 
+	[FMODUnity.EventRef]
+	public string jingle;
+
+	FMOD.Studio.EventInstance jingle_Event;
+
+	[FMODUnity.EventRef]
+	public string jingle2;
+
+	FMOD.Studio.EventInstance jingle2_Event;
+
 	bool pushed = false;
 	[SerializeField] Image myImage;
 	[SerializeField] float timerChangeScene;
