@@ -94,7 +94,6 @@ public class CineticGunV2 : MonoBehaviour {
 
 	[SerializeField] GameObject TurnUi;
 
-	bool isChangingScene = false;
 
 	void Start () {
 	
@@ -297,7 +296,7 @@ public class CineticGunV2 : MonoBehaviour {
 
 
 		RaycastHit hita; 
-		if (Physics.SphereCast (transform.position,castSize,Camera.main.transform.TransformDirection (Vector3.forward), out hita, Mathf.Infinity, myMask) && hita.collider.GetComponent<BlockAlreadyMovingV2> () && lastPlateformSeen != hita.collider.gameObject) { 
+		if (Physics.SphereCast (transform.position,castSize,Camera.main.transform.TransformDirection (Vector3.forward), out hita, Mathf.Infinity, myMask) && hita.collider.GetComponent<BlockAlreadyMovingV2> () && lastPlateformSeen != hita.collider.gameObject && hita.collider.GetComponent<BlockAlreadyMovingV2> ().direction != new Vector3(0,0,0)) { 
 			if(lastParticuleDirection!= null){
 				lastParticuleDirection.GetComponent<ParticleSystem>().Stop();
 				Destroy(lastParticuleDirection,6);
@@ -307,7 +306,7 @@ public class CineticGunV2 : MonoBehaviour {
 			lastParticuleDirection.transform.position = lastPlateformSeen.transform.position;
 			lastParticuleDirection.transform.LookAt (lastParticuleDirection.transform.position+hita.collider.GetComponent<BlockAlreadyMovingV2>().direction);
 			lastParticuleDirection.transform.parent = lastPlateformSeen.transform;
-		}else if ( !Physics.SphereCast (transform.position,castSize, Camera.main.transform.TransformDirection (Vector3.forward), out hita, Mathf.Infinity, myMask)){
+		}else if ( !Physics.SphereCast (transform.position,castSize, Camera.main.transform.TransformDirection (Vector3.forward), out hita, Mathf.Infinity, myMask )){
 			lastPlateformSeen = null;
 			if(lastParticuleDirection != null){
 				lastParticuleDirection.GetComponent<ParticleSystem>().Stop();
@@ -352,12 +351,7 @@ public class CineticGunV2 : MonoBehaviour {
 		delock ();
 	}
 
-	void OnTriggerEnter(){
-		if (!isChangingScene) {
-			isChangingScene = true;
-			StartCoroutine ("changeScene");
-		}
-	}
+
 
 
 	void delock(){
