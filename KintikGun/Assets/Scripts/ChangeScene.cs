@@ -6,6 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour {
 
+	[FMODUnity.EventRef]
+	public string jingle;
+
+	FMOD.Studio.EventInstance jingle_Event;
+
+	[FMODUnity.EventRef]
+	public string jingle2;
+
+	FMOD.Studio.EventInstance jingle2_Event;
+
+	[FMODUnity.EventRef]
+	public string music;
+
+	FMOD.Studio.EventInstance music_Event;
+
 	bool pushed = false;
 	[SerializeField] Image myImage;
 	[SerializeField] float timerChangeScene;
@@ -13,6 +28,10 @@ public class ChangeScene : MonoBehaviour {
 	[SerializeField] string sceneName;
 
 	void Start(){
+		jingle_Event = FMODUnity.RuntimeManager.CreateInstance (jingle);
+		jingle2_Event = FMODUnity.RuntimeManager.CreateInstance (jingle2);
+		music_Event = FMODUnity.RuntimeManager.CreateInstance (music);
+		jingle_Event.start ();
 		StartCoroutine ("changeSceneBegin");
 
 	}
@@ -26,6 +45,8 @@ public class ChangeScene : MonoBehaviour {
 	}
 
 	IEnumerator changeScene(){
+		music_Event.stop (FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+		jingle2_Event.start ();
 		for (int i = 0; i < timer; i++) {
 			myImage.color = new Color(myImage.color.r,myImage.color.g,myImage.color.b, myImage.color.a+ 1 / timer);
 			yield return new WaitForEndOfFrame ();
@@ -40,6 +61,7 @@ public class ChangeScene : MonoBehaviour {
 			myImage.color = new Color(myImage.color.r,myImage.color.g,myImage.color.b, myImage.color.a- 1 / (timer/2));
 			yield return new WaitForEndOfFrame ();
 		}
+		music_Event.start ();
 		yield return null;
 	}
 
