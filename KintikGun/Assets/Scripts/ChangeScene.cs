@@ -33,7 +33,7 @@ public class ChangeScene : MonoBehaviour {
 		jingle_Event = FMODUnity.RuntimeManager.CreateInstance (jingle);
 		jingle2_Event = FMODUnity.RuntimeManager.CreateInstance (jingle2);
 		music_Event = FMODUnity.RuntimeManager.CreateInstance (music);
-		jingle_Event.start ();
+		//jingle_Event.start ();
 		StartCoroutine ("changeSceneBegin");
 
 	}

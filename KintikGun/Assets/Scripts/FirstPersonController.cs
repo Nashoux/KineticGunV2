@@ -55,9 +55,12 @@ using Random = UnityEngine.Random;
 
 
 	IEnumerator changeScene(){
+		music_Event.stop (FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+		jingle2_Event.start ();
 		for (int i = 0; i < timer; i++) {
 			myImage.color = new Color(myImage.color.r,myImage.color.g,myImage.color.b, myImage.color.a+ 1 / timer);
 			yield return new WaitForEndOfFrame ();
+
 		}
 
 		for (int i = 0; i < timer/2; i++) {
@@ -209,12 +212,13 @@ using Random = UnityEngine.Random;
 		}
 	}
 
-	void OnTriggerEnter(){
-		if (!isChangingScene) {
+	void OnTriggerEnter(Collider col){
+		if (!isChangingScene && col.tag == "changeScene") {
 			jingle2_Event.start ();  
 			isChangingScene = true;
 			StartCoroutine ("changeScene");
 		}
+
 	}
 
 
