@@ -79,11 +79,40 @@ using Random = UnityEngine.Random;
 			myImage.color = new Color(myImage.color.r,myImage.color.g,myImage.color.b, myImage.color.a- 1 / timer);
 			yield return new WaitForEndOfFrame ();
 		}
+		music_Event.start ();
 		yield return null;
+	}
+
+	[FMODUnity.EventRef]
+	public string jingle;
+
+	FMOD.Studio.EventInstance jingle_Event;
+
+	[FMODUnity.EventRef]
+	public string jingle2;
+
+	FMOD.Studio.EventInstance jingle2_Event;
+
+	[FMODUnity.EventRef]
+	public string music;
+
+	FMOD.Studio.EventInstance music_Event;
+
+	void Start(){
+
+
+
 	}
 
         // Use this for initialization
         private void Start(){
+
+		jingle_Event = FMODUnity.RuntimeManager.CreateInstance (jingle);
+		jingle2_Event = FMODUnity.RuntimeManager.CreateInstance (jingle2);
+		music_Event = FMODUnity.RuntimeManager.CreateInstance (music);
+		jingle_Event.start ();
+
+
 		StartCoroutine ("justChangeScene");
 		jump_Event = FMODUnity.RuntimeManager.CreateInstance (jump);
 		jump_Down_Event = FMODUnity.RuntimeManager.CreateInstance (jump_Down);
@@ -187,6 +216,7 @@ using Random = UnityEngine.Random;
 
 	void OnTriggerEnter(){
 		if (!isChangingScene) {
+			jingle2_Event.start ();  
 			isChangingScene = true;
 			StartCoroutine ("changeScene");
 		}
