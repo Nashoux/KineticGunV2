@@ -94,6 +94,8 @@ public class CineticGunV2 : MonoBehaviour {
 
 	[SerializeField] GameObject TurnUi;
 
+	bool isChangingScene = false;
+
 	void Start () {
 	
 
@@ -348,6 +350,13 @@ public class CineticGunV2 : MonoBehaviour {
 
 	void OnCollisionEnter(){
 		delock ();
+	}
+
+	void OnTriggerEnter(){
+		if (!isChangingScene) {
+			isChangingScene = true;
+			StartCoroutine ("changeScene");
+		}
 	}
 
 

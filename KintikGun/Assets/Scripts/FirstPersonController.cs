@@ -1,5 +1,9 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
+using System.Collections;
+using UnityEngine.SceneManagement;
 //using UnityStandardAssets.CrossPlatformInput;
 //using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
@@ -33,14 +37,57 @@ using Random = UnityEngine.Random;
 	bool collided = false;
 
 
-		public bool grounded = false;
-		[SerializeField] CineticGunV2 myGun;
+	public bool grounded = false;
+	[SerializeField] CineticGunV2 myGun;
 
-		[SerializeField] Vector3 newVelocity;
+	[SerializeField] Vector3 newVelocity;
+
+	[SerializeField] Image myImage;
+	[SerializeField] Image tittle;
+	[SerializeField] float timerChangeScene;
+	[SerializeField] float timer;
+	[SerializeField] string sceneName;
+
+	bool isChangingScene = false;
+
+
+
+
+
+	IEnumerator changeScene(){
+		for (int i = 0; i < timer; i++) {
+			myImage.color = new Color(myImage.color.r,myImage.color.g,myImage.color.b, myImage.color.a+ 1 / timer);
+			yield return new WaitForEndOfFrame ();
+		}
+
+		for (int i = 0; i < timer/2; i++) {
+			tittle.color = new Color(tittle.color.r,tittle.color.g,tittle.color.b, tittle.color.a+ 1 / (timer/2));
+			yield return new WaitForEndOfFrame ();
+		}
+		yield return new WaitForSeconds(timerChangeScene);
+
+		for (int i = 0; i < timer/2; i++) {
+			tittle.color = new Color(tittle.color.r,tittle.color.g,tittle.color.b, tittle.color.a- 1 / (timer/2));
+			yield return new WaitForEndOfFrame ();
+		}
+
+		yield return new WaitForSeconds(timerChangeScene);
+		SceneManager.LoadSceneAsync (sceneName, LoadSceneMode.Single);
+		yield return null;
+	}
+	IEnumerator justChangeScene(){
+		for (int i = 0; i < timer; i++) {
+			myImage.color = new Color(myImage.color.r,myImage.color.g,myImage.color.b, myImage.color.a- 1 / timer);
+			yield return new WaitForEndOfFrame ();
+		}
+		yield return new WaitForSeconds(timerChangeScene);
+		SceneManager.LoadSceneAsync (sceneName, LoadSceneMode.Single);
+		yield return null;
+	}
 
         // Use this for initialization
         private void Start(){
-
+		StartCoroutine ("justChangeScene");
 		jump_Event = FMODUnity.RuntimeManager.CreateInstance (jump);
 		jump_Down_Event = FMODUnity.RuntimeManager.CreateInstance (jump_Down);
 		
@@ -140,6 +187,14 @@ using Random = UnityEngine.Random;
 			}
 		}
 	}
+
+	void OnTriggerEnter(){
+		if (!isChangingScene) {
+			isChangingScene = true;
+			StartCoroutine ("changeScene");
+		}
+	}
+
 
 	void OnCollisionStay(Collision col){
 

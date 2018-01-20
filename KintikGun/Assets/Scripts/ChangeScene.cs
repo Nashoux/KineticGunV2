@@ -22,7 +22,6 @@ public class ChangeScene : MonoBehaviour {
 	}
 
 	IEnumerator changeScene(){
-
 		for (int i = 0; i < timer; i++) {
 			myImage.color = new Color(myImage.color.r,myImage.color.g,myImage.color.b, myImage.color.a+ 1 / timer);
 			yield return new WaitForEndOfFrame ();
