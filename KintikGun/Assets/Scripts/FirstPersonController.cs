@@ -71,7 +71,6 @@ using Random = UnityEngine.Random;
 			yield return new WaitForEndOfFrame ();
 		}
 
-		yield return new WaitForSeconds(timerChangeScene);
 		SceneManager.LoadSceneAsync (sceneName, LoadSceneMode.Single);
 		yield return null;
 	}
@@ -80,8 +79,6 @@ using Random = UnityEngine.Random;
 			myImage.color = new Color(myImage.color.r,myImage.color.g,myImage.color.b, myImage.color.a- 1 / timer);
 			yield return new WaitForEndOfFrame ();
 		}
-		yield return new WaitForSeconds(timerChangeScene);
-		SceneManager.LoadSceneAsync (sceneName, LoadSceneMode.Single);
 		yield return null;
 	}
 
