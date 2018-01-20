@@ -383,6 +383,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a0063522c70154f96cafe924e52f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jingle: event:/Transition1
+  jingle2: event:/Transition2
+  music: event:/Musique_Menu
   myImage: {fileID: 1543729888}
   timerChangeScene: 0.5
   timer: 80
@@ -734,7 +737,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 825323150}
-  m_LocalRotation: {x: -0.35325742, y: -0.13558826, z: -0.55994153, w: -0.73708254}
+  m_LocalRotation: {x: -0.3532574, y: -0.13558824, z: -0.5599415, w: -0.7370825}
   m_LocalPosition: {x: 0, y: 1.3999996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
