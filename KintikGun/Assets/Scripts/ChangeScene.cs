@@ -30,6 +30,8 @@ public class ChangeScene : MonoBehaviour {
 	FMOD.Studio.EventInstance music_Event;
 
 	void Start(){
+
+		Cursor.visible = false;
 		jingle_Event = FMODUnity.RuntimeManager.CreateInstance (jingle);
 		jingle2_Event = FMODUnity.RuntimeManager.CreateInstance (jingle2);
 		music_Event = FMODUnity.RuntimeManager.CreateInstance (music);
