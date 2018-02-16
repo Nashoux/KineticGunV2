@@ -170,10 +170,12 @@ public class CineticGunV2 : MonoBehaviour {
 			stocked = true;
 			RaycastHit hit;
 			if (Physics.Raycast (transform.position, Camera.main.transform.TransformDirection (Vector3.forward), out hit, Mathf.Infinity, myMask) &&  hit.collider.GetComponent<BlockAlreadyMovingV2>()  ) {
-
+				BlockAlreadyMovingV2 myBlock = hit.collider.GetComponent<BlockAlreadyMovingV2>();
 				Gun_Don_Direction_Event.start();
-				hit.collider.GetComponent<BlockAlreadyMovingV2> ().direction = Vector3.Normalize( new Vector3 ( myDirectionGo [1].transform.position.x - myDirectionGo [0].transform.position.x,  myDirectionGo [1].transform.position.y - myDirectionGo [0].transform.position.y , myDirectionGo [1].transform.position.z - myDirectionGo [0].transform.position.z));
-				lastParticuleDirection.transform.LookAt(lastParticuleDirection.transform.position+hit.collider.GetComponent<BlockAlreadyMovingV2>().direction);	
+				myBlock.direction = Vector3.Normalize( new Vector3 ( myDirectionGo [1].transform.position.x - myDirectionGo [0].transform.position.x,  myDirectionGo [1].transform.position.y - myDirectionGo [0].transform.position.y , myDirectionGo [1].transform.position.z - myDirectionGo [0].transform.position.z));
+				lastParticuleDirection.transform.LookAt(lastParticuleDirection.transform.position+myBlock.direction);	
+				Vector3 velocity = myBlock.direction * Time.deltaTime * myBlock.energie;
+				myBlock.rb.velocity = velocity;
 			}
 		} else {
 			stocked = false;
@@ -186,17 +188,17 @@ public class CineticGunV2 : MonoBehaviour {
 		if ( Input.GetKey (KeyCode.Joystick1Button4)|| Input.GetKey (KeyCode.A) ) {
 				RaycastHit energiseHit;
 				if (Physics.SphereCast (transform.position, castSize, Camera.main.transform.TransformDirection (Vector3.forward), out energiseHit, Mathf.Infinity, myMask) && energiseHit.collider.GetComponent<BlockAlreadyMovingV2> ()  ) {
+					BlockAlreadyMovingV2 myBlock = energiseHit.collider.GetComponent<BlockAlreadyMovingV2> ();
 					if(myEnergie < myEnergieMax){
-						if(energiseHit.collider.GetComponent<BlockAlreadyMovingV2> ().energie>0){
-
+						if(myBlock.energie>0){							
 							if (energiseTake && ( Input.GetKeyDown (KeyCode.Joystick1Button4) || Input.GetKeyDown (KeyCode.A) )) {
 								float myAddedEnergie = myEnergieMax - myEnergie;
-								if(myAddedEnergie <= energiseHit.collider.GetComponent<BlockAlreadyMovingV2> ().energie){
+								if(myAddedEnergie <= myBlock.energie){
 									myEnergie += myAddedEnergie;
-									energiseHit.collider.GetComponent<BlockAlreadyMovingV2> ().energie -= myAddedEnergie;
+									myBlock.energie -= myAddedEnergie;
 								}else{
-									myEnergie += energiseHit.collider.GetComponent<BlockAlreadyMovingV2> ().energie;
-									energiseHit.collider.GetComponent<BlockAlreadyMovingV2> ().energie = 0;
+									myEnergie += myBlock.energie;
+									myBlock.energie = 0;
 								}
 
 								lastParticuleAspiration.GetComponent<ParticleSystem>().Emit((int)myEnergie/3);
@@ -215,9 +217,24 @@ public class CineticGunV2 : MonoBehaviour {
 									energiseTakeTimer = 0.8f;
 								}
 								isTackingEnergie = true;
-								energiseHit.collider.GetComponent<BlockAlreadyMovingV2> ().energie -= 3;
+								myBlock.energie -= 3;
 								myEnergie += 3;
-							}				
+							}
+
+							if (myBlock.energie < 0f) {
+								myBlock.energie = 0f;
+							}
+							float energieNew = myBlock.energie / 20f;
+							energieNew= Mathf.Log10 (energieNew)*3f;
+							if (energieNew < 0) {
+								energieNew = 0;
+							}
+							for (int i = 0; i < myBlock.myMat.Length; i++) {			
+								myBlock.myMat[i].SetFloat("_Size1", energieNew);
+								myBlock.myMat[i].SetFloat("_Size2", energieNew*70f/100f);
+							}	
+							Vector3 velocity = myBlock.direction * Time.deltaTime * myBlock.energie;
+							myBlock.rb.velocity = velocity;				
 						}
 					}else{
 						if(Input.GetKeyDown (KeyCode.Joystick1Button4) || Input.GetKeyDown (KeyCode.A)){
@@ -299,7 +316,7 @@ public class CineticGunV2 : MonoBehaviour {
 			RaycastHit hit;
 			if (Physics.SphereCast (transform.position,castSize, Camera.main.transform.TransformDirection (Vector3.forward), out hit, Mathf.Infinity, myMask) && hit.collider.GetComponent<BlockAlreadyMovingV2> ()) {
 				if(myEnergie>=3){
-
+					BlockAlreadyMovingV2 myBlock = hit.collider.GetComponent<BlockAlreadyMovingV2> ();
 					Debug.Log(triger1);
 					Debug.Log(lastInputTrigger);
 					if (energiseGift &&  (lastInputTrigger <= 0.09f  || Input.GetKeyDown (KeyCode.E))) {
@@ -307,7 +324,7 @@ public class CineticGunV2 : MonoBehaviour {
 						lastParticuleAspirationGive.GetComponent<ParticleSystem>().Stop();
 						Destroy(lastParticuleAspirationGive.gameObject,2.5f);
 						isTackingEnergieGive = false;
-					hit.collider.GetComponent<BlockAlreadyMovingV2> ().energie += myEnergie;
+					myBlock.energie += myEnergie;
 					myEnergie = 0;
 					} else {
 						if (lastInputTrigger <= 0.09f  || Input.GetKeyDown (KeyCode.E) || lastPlateformSeen != hit.collider.gameObject){
@@ -321,10 +338,25 @@ public class CineticGunV2 : MonoBehaviour {
 							energiseGift = true;
 							energiseGiftTimer = 0.8f;
 						}
-						hit.collider.GetComponent<BlockAlreadyMovingV2> ().energie += 3;
+						myBlock.energie += 3;
 						myEnergie -= 3;
 						lastParticuleAspirationGive.GetComponent<ParticleSystem>().Emit((int)myEnergie/3);
 					}
+
+					if (myBlock.energie < 0f) {
+								myBlock.energie = 0f;
+							}
+							float energieNew = myBlock.energie / 20f;
+							energieNew= Mathf.Log10 (energieNew)*3f;
+							if (energieNew < 0) {
+								energieNew = 0;
+							}
+							for (int i = 0; i < myBlock.myMat.Length; i++) {			
+								myBlock.myMat[i].SetFloat("_Size1", energieNew);
+								myBlock.myMat[i].SetFloat("_Size2", energieNew*70f/100f);
+							}	
+							Vector3 velocity = myBlock.direction * Time.deltaTime * myBlock.energie;
+							myBlock.rb.velocity = velocity;	
 				}else{
 					if(lastInputTrigger <= 0.09f  || Input.GetKeyDown (KeyCode.E)){
 						Gun_Min_Energie_Event.start();
