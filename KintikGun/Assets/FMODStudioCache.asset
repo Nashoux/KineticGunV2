@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114810191329070790}
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   EditorEvents:
   - {fileID: 114756076085892200}
   - {fileID: 114788675410811268}
@@ -39,9 +39,9 @@ MonoBehaviour:
   - {fileID: 114894766761401200}
   - {fileID: 114946392015347756}
   - {fileID: 114935288989076504}
-  MasterBankRef: {fileID: 114887434804336286}
+  MasterBankRef: {fileID: 114922366369208762}
   StringsBankRef: {fileID: 114810191329070790}
-  stringsBankWriteTime: 636537909917132362
+  stringsBankWriteTime: 636520345825763750
   cacheVersion: 2
 --- !u!114 &114002894812359648
 MonoBehaviour:
@@ -132,7 +132,7 @@ MonoBehaviour:
   Path: event:/Saut_retombe
   guid: 663b5283f160344e8299f3ef289dbca2
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -207,7 +207,7 @@ MonoBehaviour:
   Path: event:/Musique_Menu
   guid: 583a756147533e4db472c9d6ecbfdd4f
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -283,6 +283,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3528480
   Exists: 1
+--- !u!114 &114207219769620424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Energ_Orient
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114209021422853766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,7 +312,7 @@ MonoBehaviour:
   Path: event:/Energie_Stocked
   guid: 6cec75647544f5489737f134129a260b
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -338,7 +353,7 @@ MonoBehaviour:
   Path: event:/Gun_UnLock
   guid: 798fd690406f8840bc13b1da9f5382fd
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -462,12 +477,12 @@ MonoBehaviour:
   Path: event:/objetDansLeViseur
   guid: 3f06b4c82212b149a565d132a5fe89f0
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114955783614781984}
+  - {fileID: 114207219769620424}
   MinDistance: 0
   MaxDistance: 0
   Length: 1850
@@ -534,7 +549,7 @@ MonoBehaviour:
   Path: event:/Transition2
   guid: 2761673776df9b44a4d5842b64a6b266
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -556,7 +571,7 @@ MonoBehaviour:
   Path: event:/Gun_Absorbe_Energie
   guid: dd19c4d94b603243939ec02d30682ff8
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -578,7 +593,7 @@ MonoBehaviour:
   Path: event:/Transition1
   guid: 53343d1709e78d429a7b5c9d662ffa33
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -600,7 +615,7 @@ MonoBehaviour:
   Path: event:/AMBIANCE_desert
   guid: e512cee23ad5ca4e97572b4db9bc4d7d
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -677,7 +692,7 @@ MonoBehaviour:
   Path: event:/GrosDeplacement
   guid: c5d6d14879ac094d83e99cf05518c9da
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -714,7 +729,7 @@ MonoBehaviour:
   Path: event:/Nouvelle Orientation
   guid: 72b96480bd6aad40aca94f715684770e
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -736,7 +751,7 @@ MonoBehaviour:
   Path: event:/Jauge_Energie_MAX
   guid: 6f79cf3813884841bc3e1c69a0ca59d8
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -758,7 +773,7 @@ MonoBehaviour:
   Path: event:/Gun_Absorbe_Orientation
   guid: aec6f5359ea21b4586c53fea77f9c793
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -795,7 +810,7 @@ MonoBehaviour:
   Path: event:/Gun_Don_Energie
   guid: c1f3ef97af84a748ab3ee904cfa94371
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -847,7 +862,7 @@ MonoBehaviour:
   Path: event:/Gun_FinDon
   guid: d345560f898e5545b7cec27a53164d65
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -914,7 +929,7 @@ MonoBehaviour:
   Path: event:/AMBIANCE
   guid: f7baa4f33464644bb0a4083e7aec738b
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -936,7 +951,7 @@ MonoBehaviour:
   Path: event:/Gun_Don_Orientation
   guid: 5b9e25728a4ae6419a3340676f24f4ec
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -958,7 +973,7 @@ MonoBehaviour:
   Path: "event:/Saut_lev\xE9e"
   guid: b8be8c5dd72f4248b7bf3d87b654f6b1
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -995,7 +1010,7 @@ MonoBehaviour:
   Path: event:/MoyenDeplacement
   guid: 620e38cd591a6b4d9ba2e34f86f83764
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1017,7 +1032,7 @@ MonoBehaviour:
   Path: event:/Jauge_Energie_MIN
   guid: 0cc2f0dac8bb6c419f31ad2d26b2d8bb
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1039,7 +1054,7 @@ MonoBehaviour:
   Path: event:/Gun_Lock
   guid: 31a1d96fdd69ec4a8c0296fd38c06177
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1059,7 +1074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD_CINETICGUN\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636537909917132362
+  lastModified: 636520345825763750
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1113,7 +1128,7 @@ MonoBehaviour:
   Path: event:/Transition4
   guid: 1b30edd798dd514490ede8a6ed3e15a1
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1136,6 +1151,25 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114922366369208762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Document\Unity powa\Kinetika\KintikGun\FMOD_CINETICGUN\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636520345825505609
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 4362272
+  Exists: 1
 --- !u!114 &114923625571419158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1165,7 +1199,7 @@ MonoBehaviour:
   Path: event:/MusiqueJeu
   guid: 2751b632c815334b8c62002d58114114
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1187,7 +1221,7 @@ MonoBehaviour:
   Path: event:/Transition3
   guid: 52abaec50a168049a889f09d4265e716
   Banks:
-  - {fileID: 114887434804336286}
+  - {fileID: 114922366369208762}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
