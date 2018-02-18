@@ -241,7 +241,7 @@ public class CineticGunV2 : MonoBehaviour {
 							Gun_Min_Energie_Event.start();
 						}
 					}
-				}else if (energiseHit.transform.tag == "destructible"){
+			}else if (energiseHit.collider != null && energiseHit.transform.tag == "destructible"){
 					if(myEnergie < myEnergieMax){
 						if(energiseHit.rigidbody.velocity.magnitude >0){
 
