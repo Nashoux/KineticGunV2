@@ -138,6 +138,7 @@ public class CineticGunV2 : MonoBehaviour {
 
 		#region direction
 		//Prendre une force
+		
 /*
 		if (Input.GetKey (KeyCode.Joystick1Button5) || Input.GetMouseButtonDown (1)) {
 			RaycastHit hit; 
@@ -176,10 +177,25 @@ public class CineticGunV2 : MonoBehaviour {
 				lastParticuleDirection.transform.LookAt(lastParticuleDirection.transform.position+myBlock.direction);	
 				Vector3 velocity = myBlock.direction * Time.deltaTime * myBlock.energie;
 				myBlock.rb.velocity = velocity;
+				myBlock.rb.angularVelocity = new Vector3(0,0,0);
 			}
 		} else {
 			stocked = false;
-		}		
+		}
+
+		//inverse
+		if(Input.GetKeyDown(KeyCode.Joystick1Button5) || Input.GetMouseButtonDown(1)){
+			RaycastHit hit;
+			if (Physics.Raycast (transform.position, Camera.main.transform.TransformDirection (Vector3.forward), out hit, Mathf.Infinity, myMask) &&  hit.collider.GetComponent<BlockAlreadyMovingV2>()  ) {
+				BlockAlreadyMovingV2 myBlock = hit.collider.GetComponent<BlockAlreadyMovingV2>();
+				Gun_Don_Direction_Event.start();
+				myBlock.direction = Vector3.Normalize( new Vector3 ( myDirectionGo [0].transform.position.x-myDirectionGo [1].transform.position.x,  myDirectionGo [0].transform.position.y - myDirectionGo [1].transform.position.y,myDirectionGo [0].transform.position.z -  myDirectionGo [1].transform.position.z));
+				lastParticuleDirection.transform.LookAt(lastParticuleDirection.transform.position+myBlock.direction);	
+				Vector3 velocity = myBlock.direction * Time.deltaTime * myBlock.energie;
+				myBlock.rb.velocity = velocity;
+				myBlock.rb.angularVelocity = new Vector3(0,0,0);
+			}
+		}
 		#endregion
 
 		#region Energise
