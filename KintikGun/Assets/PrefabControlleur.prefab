@@ -74,7 +74,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1146637348482280
 GameObject:
   m_ObjectHideFlags: 1
@@ -334,7 +334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1764649257046252
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,7 +469,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1660136634720068}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 276.9997, y: 155.99997, z: 0}
+  m_LocalPosition: {x: 10, y: 186, z: 115}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4722501777198690}
@@ -531,7 +531,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1451762791790092}
   m_LocalRotation: {x: -0, y: 0.04580935, z: -0, w: 0.99895024}
-  m_LocalPosition: {x: 290.5703, y: -62.67997, z: -373.18}
+  m_LocalPosition: {x: 290.5703, y: -36.71, z: -373.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4367337619080638}
@@ -739,7 +739,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1451762791790092}
   serializedVersion: 2
-  m_Mass: 15
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -1003,7 +1003,7 @@ MonoBehaviour:
   Gun_Unlock: event:/Gun_UnLock
   Gun_Absorbe_Energie: event:/Gun_Absorbe_Energie
   Gun_Don_Energie: event:/Gun_Don_Energie
-  Gun_Absorbe_Direction: event:/Gun_Absorbe_Orientation
+  Gun_Absorbe_Direction: event:/Gun_Don_Orientation
   Gun_Don_Direction: event:/Gun_Don_Orientation
   ParticulesAspiration: {fileID: 1834417840260794, guid: 9bcd354bcf36dc941933d7009541ccbd,
     type: 2}
@@ -1012,7 +1012,7 @@ MonoBehaviour:
   myGameObbject: {fileID: 1966223535011822, guid: 75e4a6fd2002c454fbec3af907ded6ad,
     type: 2}
   fpc: {fileID: 114628584907281224}
-  myEnergieMax: 700
+  myEnergieMax: 1000
   blockLock: {fileID: 0}
   myDirectionGo:
   - {fileID: 0}
@@ -1077,8 +1077,8 @@ MonoBehaviour:
   jump_Down: event:/Saut_retombe
   speed: 7
   m_MouseLook:
-    XSensitivity: 2
-    YSensitivity: 2
+    XSensitivity: 5
+    YSensitivity: 5
     clampVerticalRotation: 1
     MinimumX: -90
     MaximumX: 90
@@ -1096,9 +1096,9 @@ MonoBehaviour:
   timerChangeScene: 1
   timer: 140
   sceneName: MenuStart
-  jingle: event:/Transition1
-  jingle2: event:/Transition2
-  music: event:/MusiqueJeu
+  jingle: event:/Musique/Transition1
+  jingle2: event:/Musique/Transition2
+  music: event:/Musique/Transition3
 --- !u!114 &114636275325241972
 MonoBehaviour:
   m_ObjectHideFlags: 1
