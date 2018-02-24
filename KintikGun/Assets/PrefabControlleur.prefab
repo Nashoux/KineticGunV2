@@ -229,7 +229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1618219476152556
 GameObject:
   m_ObjectHideFlags: 1
@@ -531,7 +531,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1451762791790092}
   m_LocalRotation: {x: -0, y: 0.04580935, z: -0, w: 0.99895024}
-  m_LocalPosition: {x: 290.5703, y: -36.71, z: -373.18}
+  m_LocalPosition: {x: 290.5703, y: 103, z: -373.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4367337619080638}
@@ -1017,18 +1017,12 @@ MonoBehaviour:
   myDirectionGo:
   - {fileID: 0}
   - {fileID: 0}
-  directionVectorSign: {fileID: 1352677855772216}
   viseurObjects:
   - {fileID: 114946299841539568}
   - {fileID: 114605137431248060}
   - {fileID: 114132649947964256}
   - {fileID: 114828664515235070}
-  viseurBegin:
-  - 0
-  - 0.031
-  - 0.298
-  - 0.19
-  viseurEnd:
+  viseurFill:
   - 0
   - 0
   - 0

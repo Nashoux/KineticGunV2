@@ -17,7 +17,7 @@ public class SpawnerPlateforme : ScriptableWizard
 
 	public string parentObject = "Islands";
 
-	public Vector3 baseRotation;
+	//public Vector3 baseRotation;
 	public Vector3 basePosition;
 
     [MenuItem ("My Tools/CreatePlateform")]
@@ -31,7 +31,7 @@ public class SpawnerPlateforme : ScriptableWizard
         //spawn my plateform and change the transform
         GameObject myPlateform = new GameObject (); 
 		myPlateform.name = objectName;		
-		myPlateform.transform.localRotation = Quaternion.EulerAngles(baseRotation);
+		//myPlateform.transform.localRotation = Quaternion.EulerAngles(baseRotation);
 		myPlateform.transform.position = basePosition;
 		myPlateform.transform.localScale = size;
 		if(GameObject.Find(parentObject)){

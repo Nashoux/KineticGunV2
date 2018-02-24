@@ -31,7 +31,6 @@ using Random = UnityEngine.Random;
     private float m_YRotation;
     private Vector2 m_Input;
     private Vector3 m_MoveDir = Vector3.zero;
-    private Vector3 m_OriginalCameraPosition;
 	private Rigidbody rb;
 
 	bool collided = false;
@@ -118,8 +117,6 @@ using Random = UnityEngine.Random;
 			rb = GetComponent<Rigidbody> ();
 
             m_Camera = Camera.main;
-            m_OriginalCameraPosition = m_Camera.transform.localPosition;
-
 			m_MouseLook.Init(transform , m_Camera.transform);
         }
 
@@ -184,15 +181,6 @@ using Random = UnityEngine.Random;
             }           
         }
 
-//	void OnCollisionEnter(Collision col){
-//		Debug.Log (col.contacts [0].normal);
-//		if (col.contacts [0].normal == new Vector3 (0, 1, 0)) {
-//			grounded = true;
-//		} else {
-//			grounded = false;
-//		}
-//	}
-
 
         private void RotateView()
         {
@@ -223,8 +211,6 @@ using Random = UnityEngine.Random;
 
 
 	void OnCollisionStay(Collision col){
-
-
 
 		if (col.contacts [0].normal.y > -0.1f) {
 			m_Jump = false;

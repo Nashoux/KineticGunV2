@@ -72,9 +72,6 @@ public class CineticGunV2 : MonoBehaviour {
 	public BlockAlreadyMovingV2 blockLock;
 	public GameObject[] myDirectionGo = new GameObject[2];
 
-	[SerializeField] GameObject directionVectorSign;
-	Vector3 directionGyro;
-
 	GameObject lastParticuleAspiration;
 	GameObject lastParticuleAspirationGive;
 
@@ -84,8 +81,7 @@ public class CineticGunV2 : MonoBehaviour {
 	#endregion 
 
 	[SerializeField] Image[] viseurObjects;
-	[SerializeField] float[] viseurBegin;
-	[SerializeField] float[] viseurEnd;
+	[SerializeField] float[] viseurFill;
 	float viseurMax = 0;
 
 	float lastInputTrigger = 0;
@@ -117,52 +113,18 @@ public class CineticGunV2 : MonoBehaviour {
 		myDirectionGo [1].transform.parent = transform.GetChild (0).transform;
 
 
-		//myMask = ~myMask;
 	}
 	
 	void Update ()	{
 
-		viseurObjects [0].fillAmount = viseurBegin[0] + myEnergie / myEnergieMax*4;
-		viseurObjects [1].fillAmount = viseurBegin [1] + myEnergie / myEnergieMax*4 - 1;
-		viseurObjects [2].fillAmount = viseurBegin [2] + myEnergie / myEnergieMax*4 - 2;
-		viseurObjects [3].fillAmount = viseurBegin [3] + myEnergie / myEnergieMax*4 - 3;
-
-		//Vector3 direction = Vector3.Normalize (new Vector3 (myDirectionGo [1].transform.position.x - myDirectionGo [0].transform.position.x, myDirectionGo [1].transform.position.y - myDirectionGo [0].transform.position.y, myDirectionGo [1].transform.position.z - myDirectionGo [0].transform.position.z));
-		//Debug.Log (direction);
-		directionGyro = Vector3.Normalize( new Vector3 ( myDirectionGo [1].transform.position.x - myDirectionGo [0].transform.position.x,  myDirectionGo [1].transform.position.y - myDirectionGo [0].transform.position.y , myDirectionGo [1].transform.position.z - myDirectionGo [0].transform.position.z));
-
-		directionVectorSign.transform.LookAt (directionVectorSign.transform.position+directionGyro,Vector3.forward);
-			
+		viseurObjects [0].fillAmount = viseurFill[0] + myEnergie / myEnergieMax*4;
+		viseurObjects [1].fillAmount = viseurFill [1] + myEnergie / myEnergieMax*4 - 1;
+		viseurObjects [2].fillAmount = viseurFill [2] + myEnergie / myEnergieMax*4 - 2;
+		viseurObjects [3].fillAmount = viseurFill [3] + myEnergie / myEnergieMax*4 - 3;				
 
 
 
 		#region direction
-		//Prendre une force
-		
-/*
-		if (Input.GetKey (KeyCode.Joystick1Button5) || Input.GetMouseButtonDown (1)) {
-			RaycastHit hit; 
-			if (Physics.Raycast (transform.position, Camera.main.transform.TransformDirection (Vector3.forward), out hit, Mathf.Infinity, myMask) && hit.collider.GetComponent<BlockAlreadyMovingV2> ()) {
-
-				Gun_Absorbe_Direction_Event.start();
-
-				if (myDirectionGo [0] != null) {
-					Destroy (myDirectionGo [0].gameObject);
-					Destroy (myDirectionGo [1].gameObject);
-				}
-
-				myDirectionGo[0] = (GameObject)Instantiate(myGameObbject);
-				myDirectionGo [0].transform.position = new Vector3 (hit.transform.position.x, hit.transform.position.y, hit.transform.position.z);
-				myDirectionGo[1] = (GameObject)Instantiate(myGameObbject);
-				myDirectionGo [1].transform.position = new Vector3 (hit.transform.position.x + hit.transform.GetComponent<BlockAlreadyMovingV2> ().direction.x, hit.transform.position.y + hit.transform.GetComponent<BlockAlreadyMovingV2> ().direction.y , hit.transform.position.z + hit.transform.GetComponent<BlockAlreadyMovingV2> ().direction.z);
-
-				myDirectionGo [0].transform.parent = transform.GetChild (0).transform;
-				myDirectionGo [1].transform.parent = transform.GetChild (0).transform;
-
-				directionGyro = Vector3.Normalize( new Vector3 ( myDirectionGo [1].transform.position.x - myDirectionGo [0].transform.position.x,  myDirectionGo [1].transform.position.y - myDirectionGo [0].transform.position.y , myDirectionGo [1].transform.position.z - myDirectionGo [0].transform.position.z));
-			}
-		}*/
-
 
 		//donner une force	
 		float triger2 = Input.GetAxis ("trigger2");
@@ -444,7 +406,6 @@ public class CineticGunV2 : MonoBehaviour {
 		}
 		#endregion
 
-		LookRotationSign ();
 
 	}
 
@@ -464,17 +425,6 @@ public class CineticGunV2 : MonoBehaviour {
 	}
 
 
-
-	public void LookRotationSign(){
-		
-		
-	//	directionVectorSign.transform.rotation =   Quaternion.Euler ( new Vector3 ((-myForce.direction.y )*180,  (-myForce.direction.z )*180, (myForce.direction.x )*180 ));
-
-	}
-
-	void OnDrawGizmos(){
-		Gizmos.DrawLine (directionVectorSign.transform.position, directionGyro*10 + directionVectorSign.transform.position);
-	}
 
 	IEnumerator turnLeftUi(){
 		for (int i = 0; i < 8; i++) {
