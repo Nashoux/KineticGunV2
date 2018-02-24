@@ -17,31 +17,31 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 114756076085892200}
   - {fileID: 114788675410811268}
-  - {fileID: 114383751073422116}
   - {fileID: 114670091772042952}
-  - {fileID: 114737742619651872}
   - {fileID: 114095688136320420}
   - {fileID: 114209021422853766}
   - {fileID: 114580692019374432}
   - {fileID: 114577488490547792}
   - {fileID: 114225726146466036}
-  - {fileID: 114599597829929608}
   - {fileID: 114677136298839838}
   - {fileID: 114610407238632644}
-  - {fileID: 114512183171228676}
-  - {fileID: 114632761523665404}
   - {fileID: 114460813263713400}
-  - {fileID: 114659270545325402}
   - {fileID: 114475087333027014}
-  - {fileID: 114458881296493246}
-  - {fileID: 114474111840446832}
-  - {fileID: 114141156504345822}
-  - {fileID: 114894766761401200}
-  - {fileID: 114946392015347756}
-  - {fileID: 114935288989076504}
+  - {fileID: 114098039341998584}
+  - {fileID: 114256950326934344}
+  - {fileID: 114983593862619682}
+  - {fileID: 114282422618336616}
+  - {fileID: 114405403754424096}
+  - {fileID: 114023019237480528}
+  - {fileID: 114602918457162292}
+  - {fileID: 114839221315759092}
+  - {fileID: 114729150998923432}
+  - {fileID: 114997865159530446}
+  - {fileID: 114058289007273842}
+  - {fileID: 114097522990489068}
   MasterBankRef: {fileID: 114011669540012358}
   StringsBankRef: {fileID: 114810191329070790}
-  stringsBankWriteTime: 636520261337296359
+  stringsBankWriteTime: 636548992354778801
   cacheVersion: 2
 --- !u!114 &114002894812359648
 MonoBehaviour:
@@ -71,12 +71,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\Users\Ania\Documents\KineticGunV2\KintikGun\FMOD_CINETICGUN\Build\Desktop\Master
     Bank.bank
-  lastModified: 636548972675110629
+  lastModified: 636548992354768775
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 4362272
   Exists: 1
+--- !u!114 &114023019237480528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Musique/Transition1
+  guid: 53343d1709e78d429a7b5c9d662ffa33
+  Banks:
+  - {fileID: 114011669540012358}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 8000
 --- !u!114 &114024413745642178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,6 +129,28 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114058289007273842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/TRASH/Gun_FinDon
+  guid: d345560f898e5545b7cec27a53164d65
+  Banks:
+  - {fileID: 114011669540012358}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 437
 --- !u!114 &114070659929804868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +203,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1462
+--- !u!114 &114097522990489068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: "event:/TRASH/AMBIANCE \xE9trange"
+  guid: f7baa4f33464644bb0a4083e7aec738b
+  Banks:
+  - {fileID: 114011669540012358}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 30040
 --- !u!114 &114097602544908296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +244,28 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3528480
   Exists: 1
+--- !u!114 &114098039341998584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Musique/Transition4
+  guid: 1b30edd798dd514490ede8a6ed3e15a1
+  Banks:
+  - {fileID: 114011669540012358}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 8000
 --- !u!114 &114104725057994226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,8 +313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Musique_Menu
   guid: 583a756147533e4db472c9d6ecbfdd4f
-  Banks:
-  - {fileID: 114011669540012358}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -429,6 +516,28 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3528480
   Exists: 1
+--- !u!114 &114256950326934344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Musique/MusiqueJeu
+  guid: 2751b632c815334b8c62002d58114114
+  Banks:
+  - {fileID: 114011669540012358}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 37333
 --- !u!114 &114257012956248746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,6 +576,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3528256
   Exists: 0
+--- !u!114 &114282422618336616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/TRASH/objetDansLeViseur
+  guid: 3f06b4c82212b149a565d132a5fe89f0
+  Banks:
+  - {fileID: 114011669540012358}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 114429962176670332}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1850
 --- !u!114 &114283255192103844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,8 +642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/objetDansLeViseur
   guid: 3f06b4c82212b149a565d132a5fe89f0
-  Banks:
-  - {fileID: 114011669540012358}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -520,6 +651,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1850
+--- !u!114 &114405403754424096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Musique/Transition3
+  guid: 52abaec50a168049a889f09d4265e716
+  Banks:
+  - {fileID: 114011669540012358}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 11333
 --- !u!114 &114410214048422776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -539,6 +692,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3528480
   Exists: 0
+--- !u!114 &114429962176670332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Energ_Orient
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114440476682383178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,8 +750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Transition2
   guid: 2761673776df9b44a4d5842b64a6b266
-  Banks:
-  - {fileID: 114011669540012358}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -626,8 +793,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Transition1
   guid: 53343d1709e78d429a7b5c9d662ffa33
-  Banks:
-  - {fileID: 114011669540012358}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -725,8 +891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/GrosDeplacement
   guid: c5d6d14879ac094d83e99cf05518c9da
-  Banks:
-  - {fileID: 114011669540012358}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -836,8 +1001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Gun_Absorbe_Orientation
   guid: aec6f5359ea21b4586c53fea77f9c793
-  Banks:
-  - {fileID: 114011669540012358}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -860,6 +1024,28 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114602918457162292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Musique/Musique_Menu
+  guid: 583a756147533e4db472c9d6ecbfdd4f
+  Banks:
+  - {fileID: 114011669540012358}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 43833
 --- !u!114 &114610407238632644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,8 +1111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Gun_FinDon
   guid: d345560f898e5545b7cec27a53164d65
-  Banks:
-  - {fileID: 114011669540012358}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -992,8 +1177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/AMBIANCE
   guid: f7baa4f33464644bb0a4083e7aec738b
-  Banks:
-  - {fileID: 114011669540012358}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1060,6 +1244,28 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114729150998923432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/TRASH/Gun_Absorbe_Orientation
+  guid: aec6f5359ea21b4586c53fea77f9c793
+  Banks:
+  - {fileID: 114011669540012358}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1811
 --- !u!114 &114737742619651872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1073,8 +1279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/MoyenDeplacement
   guid: 620e38cd591a6b4d9ba2e34f86f83764
-  Banks:
-  - {fileID: 114011669540012358}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1138,11 +1343,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD_CINETICGUN\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636520261337296359
+  lastModified: 636548992354778801
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1784
+    Value: 1830
   Exists: 1
 --- !u!114 &114818922507967856
 MonoBehaviour:
@@ -1159,6 +1364,28 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114839221315759092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/TRASH/MoyenDeplacement
+  guid: 620e38cd591a6b4d9ba2e34f86f83764
+  Banks:
+  - {fileID: 114011669540012358}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2194
 --- !u!114 &114847584385667604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1210,8 +1437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Transition4
   guid: 1b30edd798dd514490ede8a6ed3e15a1
-  Banks:
-  - {fileID: 114011669540012358}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1296,8 +1522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/MusiqueJeu
   guid: 2751b632c815334b8c62002d58114114
-  Banks:
-  - {fileID: 114011669540012358}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1318,8 +1543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Transition3
   guid: 52abaec50a168049a889f09d4265e716
-  Banks:
-  - {fileID: 114011669540012358}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -1429,3 +1653,47 @@ MonoBehaviour:
   - Name: Desktop
     Value: 4362272
   Exists: 1
+--- !u!114 &114983593862619682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Musique/Transition2
+  guid: 2761673776df9b44a4d5842b64a6b266
+  Banks:
+  - {fileID: 114011669540012358}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 8000
+--- !u!114 &114997865159530446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/TRASH/GrosDeplacement
+  guid: c5d6d14879ac094d83e99cf05518c9da
+  Banks:
+  - {fileID: 114011669540012358}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4127
