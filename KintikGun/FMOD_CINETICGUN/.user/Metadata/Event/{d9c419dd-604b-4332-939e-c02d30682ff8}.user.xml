@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{d9c419dd-604b-4332-939e-c02d30682ff8}">
+        <relationship name="selectables">
+            <destination>{a4b6b7ad-0b4d-44c2-b9b4-0f51f88d83fc}</destination>
+        </relationship>
         <relationship name="uiLastParameterSelection">
             <destination>{98c4c0ed-4fcd-4eb7-9258-5fc8ab60d28e}</destination>
         </relationship>
@@ -47,9 +50,20 @@
     <object class="MixerBusPanner" id="{93aeaa78-fca7-49e0-96be-9ace8163a9f2}"/>
     <object class="MixerBusEffectChain" id="{f4ba723f-a1a2-401a-af09-eb3a82019e90}"/>
     <object class="MixerBusPanner" id="{d00abd0c-6c78-4523-8926-ad263f3bc09d}"/>
+    <object class="DistortionEffect" id="{d00cd3d8-3e9a-4e27-b383-68a8a89ee020}"/>
     <object class="MixerBusFader" id="{eb104def-3a1d-4e92-84fb-f3d5a1ac9f38}"/>
+    <object class="ChorusEffect" id="{e9c0fe80-84ef-442a-9e36-311a63616864}"/>
+    <object class="FlangerEffect" id="{65445205-1591-491c-8b45-88b0db24bad5}"/>
+    <object class="SFXReverbEffect" id="{fb33cc35-9a39-4fe7-8e60-8803263ac7da}"/>
+    <object class="ThreeEQEffect" id="{24cc92e4-d406-4fd4-b656-f255fe96be9f}">
+        <property name="uiModulationDrawerVisible">
+            <value>false</value>
+        </property>
+    </object>
     <object class="MixerBusFader" id="{ec6dad02-6a82-4941-93b4-72956b1b0e85}"/>
     <object class="MixerBusFader" id="{124c94ae-c08b-485d-a5c4-2f90965d35f4}"/>
     <object class="MixerBusFader" id="{2fbb7568-58a6-493d-b7b2-68ac19a8824b}"/>
     <object class="MixerBusFader" id="{4d969b37-b460-483c-82b6-94ac0d49919d}"/>
+    <object class="RandomizerModulator" id="{ed23c7c4-75a0-4327-a6f3-20aa34d8e097}"/>
+    <object class="RandomizerModulator" id="{648ce912-c75e-486c-ae7d-12be363526b4}"/>
 </objects>

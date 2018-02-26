@@ -110,7 +110,7 @@
     </object>
     <object class="EventMixerGroup" id="{18ac0d60-1331-4d50-8054-d3406b0b9713}">
         <property name="volume">
-            <value>-18.5</value>
+            <value>-8</value>
         </property>
         <property name="name">
             <value>Audio 1</value>
@@ -191,7 +191,18 @@
         <property name="decayTime">
             <value>180</value>
         </property>
+        <relationship name="modulators">
+            <destination>{a5187fdc-a741-4733-b52a-ab6d30670673}</destination>
+        </relationship>
     </object>
     <object class="MixerBusFader" id="{d2f6f09e-94dc-4e01-802d-093b132a6d3c}"/>
     <object class="MixerBusFader" id="{48a4ae80-fb4d-49f6-9715-cb8c2aa4f673}"/>
+    <object class="RandomizerModulator" id="{a5187fdc-a741-4733-b52a-ab6d30670673}">
+        <property name="nameOfPropertyBeingModulated">
+            <value>decayTime</value>
+        </property>
+        <property name="amount">
+            <value>7</value>
+        </property>
+    </object>
 </objects>

@@ -2,10 +2,10 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{39d6411a-bcab-4884-a8ec-c88088b58e55}">
         <relationship name="selectables">
-            <destination>{1e336e57-b8a6-432c-8b56-76437f4f3ec2}</destination>
+            <destination>{c24b345b-1c44-4d05-b0f9-b9e36cfcd764}</destination>
         </relationship>
         <relationship name="uiLastParameterSelection">
-            <destination>{2a572294-208b-4334-8011-e42556d49cb2}</destination>
+            <destination>{725538fb-c536-4c4f-997c-3a4b146b0df3}</destination>
         </relationship>
     </object>
     <object class="MasterTrack" id="{c24b345b-1c44-4d05-b0f9-b9e36cfcd764}"/>
