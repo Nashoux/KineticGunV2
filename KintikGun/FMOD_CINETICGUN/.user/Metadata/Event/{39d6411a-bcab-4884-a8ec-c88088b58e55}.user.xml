@@ -42,6 +42,7 @@
     <object class="MixerBusEffectChain" id="{df8903da-c7fa-486d-a42e-8ff6a052a707}"/>
     <object class="MixerBusPanner" id="{33313dec-65d7-4842-b1f3-946cbe4a7285}"/>
     <object class="MixerBusFader" id="{cefb2182-b7e5-4cea-a046-cf12f3ef7d5d}"/>
+    <object class="SpatialiserEffect" id="{27ee5457-972a-420e-992c-fbab0528b45d}"/>
     <object class="ThreeEQEffect" id="{8c762176-42ab-49b8-b080-ddc669abfea8}"/>
     <object class="MixerBusFader" id="{760d9f14-05f4-4c2e-96a0-384b49a4e5eb}"/>
     <object class="SFXReverbEffect" id="{ab374a20-1bcd-4f1b-8ba9-3d5d5fe8c834}"/>

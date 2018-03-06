@@ -5,7 +5,7 @@
             <value>Cristaux_petit</value>
         </property>
         <property name="outputFormat">
-            <value>1</value>
+            <value>2</value>
         </property>
         <relationship name="folder">
             <destination>{8b0be67b-a91f-43ac-a004-0bc3a36767a9}</destination>
@@ -167,6 +167,7 @@
     <object class="MixerBusEffectChain" id="{5af6eb2d-1052-4457-83d1-10f2dc8a404b}">
         <relationship name="effects">
             <destination>{cefb2182-b7e5-4cea-a046-cf12f3ef7d5d}</destination>
+            <destination>{27ee5457-972a-420e-992c-fbab0528b45d}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{06d189f8-b5f7-4ddd-812f-8ce232bc4a73}"/>
@@ -196,6 +197,7 @@
     </object>
     <object class="MixerBusPanner" id="{33313dec-65d7-4842-b1f3-946cbe4a7285}"/>
     <object class="MixerBusFader" id="{cefb2182-b7e5-4cea-a046-cf12f3ef7d5d}"/>
+    <object class="SpatialiserEffect" id="{27ee5457-972a-420e-992c-fbab0528b45d}"/>
     <object class="AutomationCurve" id="{76a7fcbc-e332-4ece-98ad-9a6120be841c}">
         <relationship name="parameter">
             <destination>{c0ce231f-73fd-4468-b9b4-89e680d3ba8c}</destination>
