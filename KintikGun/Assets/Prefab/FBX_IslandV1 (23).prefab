@@ -120,7 +120,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e0104914093f50143879210e04fd7413, type: 2}
-  - {fileID: 2100000, guid: 928ef120bab08d64b80a1ecc3b8e794b, type: 2}
+  - {fileID: 2100000, guid: 320366cf9a01b1447aa50014b12177cc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -186,8 +186,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58be12b11210df04ea3dbcdcec9cf0f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnergie: 200
   energie: 50
   direction: {x: 1, y: 0, z: 1}
+  rb: {fileID: 0}
+  myMat: []
+  _BoundsUp: 0
+  _BoundsDown: 0
 --- !u!198 &198080582330496208
 ParticleSystem:
   m_ObjectHideFlags: 1

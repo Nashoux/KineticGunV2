@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{ab1623a6-d54b-4da2-913b-9e861b1fa16d}">
+        <property name="name">
+            <value>PositionAvatar</value>
+        </property>
+        <relationship name="folder">
+            <destination>{e712e32f-443e-0032-2326-3a3d99ecbb74}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{4790e0ec-3b8f-4cd9-8f5d-e8b3a19b0016}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{4790e0ec-3b8f-4cd9-8f5d-e8b3a19b0016}">
+        <property name="maximum">
+            <value>10</value>
+        </property>
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>
