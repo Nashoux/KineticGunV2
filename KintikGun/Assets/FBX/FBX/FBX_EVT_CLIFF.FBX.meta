@@ -1,69 +1,19 @@
 fileFormatVersion: 2
-guid: 46caebd581affde4da97c96d4d59726b
-timeCreated: 1515439623
+guid: c96ff9da69869e84eb0a0ba67f2fbc36
+timeCreated: 1521493679
 licenseType: Free
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 21
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Cylinder003
-    100004: Cylinder006
-    100006: Cylinder007
-    100008: Cylinder009
-    100010: Sphere001
-    100012: Sphere004
-    100014: Sphere005
-    100016: Sphere008
     400000: //RootNode
-    400002: Cylinder003
-    400004: Cylinder006
-    400006: Cylinder007
-    400008: Cylinder009
-    400010: Sphere001
-    400012: Sphere004
-    400014: Sphere005
-    400016: Sphere008
-    2300000: Cylinder003
-    2300002: Cylinder006
-    2300004: Cylinder007
-    2300006: Cylinder009
-    2300008: Sphere001
-    2300010: Sphere004
-    2300012: Sphere005
-    2300014: Sphere008
-    3300000: Cylinder003
-    3300002: Cylinder006
-    3300004: Cylinder007
-    3300006: Cylinder009
-    3300008: Sphere001
-    3300010: Sphere004
-    3300012: Sphere005
-    3300014: Sphere008
-    4300000: Sphere001
-    4300002: Sphere005
-    4300004: Sphere008
-    4300006: Sphere004
-    4300008: Cylinder009
-    4300010: Cylinder007
-    4300012: Cylinder003
-    4300014: Cylinder006
-    9500000: //RootNode
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 01 - Default
-    second: {fileID: 2100000, guid: 2f8794e660a83d74186cb78715611019, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 02-default
-    second: {fileID: 2100000, guid: 2f8794e660a83d74186cb78715611019, type: 2}
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Box010
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -76,7 +26,6 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -130,7 +79,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
