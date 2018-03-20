@@ -53,6 +53,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -69,6 +70,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -108,9 +110,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Convex: 1
-  m_InflateMesh: 0
+  m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 5489e524ebfdbbd4cbe41c26624b98d2, type: 3}
 --- !u!114 &114450173033427776
@@ -124,5 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58be12b11210df04ea3dbcdcec9cf0f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxEnergie: 200
   energie: 50
   direction: {x: 0, y: 0, z: 4}
+  rb: {fileID: 0}
+  myMat: []
+  _BoundsUp: 0
+  _BoundsDown: 0
