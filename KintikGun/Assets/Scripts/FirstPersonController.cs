@@ -153,7 +153,8 @@ using Random = UnityEngine.Random;
 		}
 		if(myGun.blockLock != null){
 			rb.useGravity = false;
-			rb.velocity = new Vector3(m_MoveDir.x+newVelocity.x+myGun.blockLock.direction.x*myGun.blockLock.energie*Time.deltaTime, newVelocity.y/100+myGun.blockLock.direction.y*myGun.blockLock.energie*Time.deltaTime, m_MoveDir.z+newVelocity.z +myGun.blockLock.direction.z*myGun.blockLock.energie*Time.deltaTime);
+			rb.velocity = Vector3.zero;
+			transform.position = myGun.blockLock.transform.position - myGun.blockLockDistanceBase;
 		}else{
 			rb.useGravity = true;
 			rb.velocity = new Vector3(m_MoveDir.x+newVelocity.x, rb.velocity.y+newVelocity.y/100, m_MoveDir.z+newVelocity.z );
@@ -194,12 +195,9 @@ using Random = UnityEngine.Random;
 		}
 
 	}
-       
-
         private void FixedUpdate(){
 		     m_MouseLook.UpdateCursorLock();
         }
-
 
         private void GetInput(){
             // Read input
@@ -215,18 +213,12 @@ using Random = UnityEngine.Random;
                 m_Input.Normalize();
             }           
         }
-
-
         private void RotateView()
         {
             m_MouseLook.LookRotation (transform, m_Camera.transform);
         }
 
 	void OnCollisionEnter(Collision col){
-
-
-
-
 		if (col.contacts [0].normal.y > -0.1f) {
 			if (!collided) {
 				jump_Down_Event.start ();
@@ -241,9 +233,7 @@ using Random = UnityEngine.Random;
 			isChangingScene = true;
 			StartCoroutine ("changeScene");
 		}
-
 	}
-
 
 	void OnCollisionStay(Collision col){
 
@@ -264,6 +254,4 @@ using Random = UnityEngine.Random;
 		newVelocity = new Vector3 (0, 0, 0);
 		grounded = false;
 	}
-
-
 }
