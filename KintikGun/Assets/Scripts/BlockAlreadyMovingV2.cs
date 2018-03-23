@@ -32,16 +32,16 @@ public void ApplyTheVelocity(){
 	if (energie < 0f) {
 			energie = 0f;
 		}
-		float energieNew = energie / 20f;
-		energieNew= Mathf.Log10 (energieNew)*3f;
+		float energieNew = energie / (maxEnergie*8);
+		//energieNew= Mathf.Log10 (energieNew)*3f;
 		if (energieNew < 0) {
 			energieNew = 0;
 		}
 		for (int i = 0; i < myMat.Length; i++) {			
 			myMat[i].SetFloat("_MKGlowTexStrength", energieNew);
 		}	
-		Vector3 velocity = direction * Time.deltaTime * energie;
-		rb.velocity = velocity;
+		Vector3 newVelocity = direction * Time.deltaTime * energie;
+		rb.velocity = newVelocity;
 }
 
 	void OnCollisionEnter(Collision col){
