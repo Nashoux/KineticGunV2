@@ -158,6 +158,41 @@ using Random = UnityEngine.Random;
 			rb.useGravity = true;
 			rb.velocity = new Vector3(m_MoveDir.x+newVelocity.x, rb.velocity.y+newVelocity.y/100, m_MoveDir.z+newVelocity.z );
 		}
+
+
+		Collider[] myObjectCollision = Physics.OverlapCapsule(transform.position+new Vector3(0,1f,0),transform.position+new Vector3(0,-0.5f,0), 0.5f) ;
+		Vector3[] myObjectPosition = new Vector3[myObjectCollision.Length]; 
+		for( int i = 0; i < myObjectCollision.Length; i ++){
+			myObjectPosition [i] = myObjectCollision[i].transform.position - transform.position;
+		}
+
+		for (  int i = 0; i < myObjectCollision.Length; i ++){
+
+			if(myObjectPosition[i].x < 0 ){
+				for (  int y = i+1; y < myObjectCollision.Length; y ++){
+					if(myObjectPosition[y].x > 0 ){
+						Debug.Log("dead x");
+					}
+				}
+			}
+
+			if(myObjectPosition[i].z < 0 ){
+				for (  int y = i+1; y < myObjectCollision.Length; y ++){
+					if(myObjectPosition[y].z > 0 ){
+						Debug.Log("dead z");
+					}
+				}
+			}
+
+			if(myObjectPosition[i].y > 0 ){
+				for (  int y = i+1; y < myObjectCollision.Length; y ++){
+					if(myObjectPosition[y].y < 0 ){
+						Debug.Log("dead y");
+					}
+				}
+			}
+		}
+
 	}
        
 

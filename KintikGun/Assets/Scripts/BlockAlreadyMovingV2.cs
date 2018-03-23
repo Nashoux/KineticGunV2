@@ -24,17 +24,11 @@ void Start(){
 	direction = Vector3.Normalize(direction);
 	rb = GetComponent<Rigidbody>();
 	myMat = GetComponent<MeshRenderer> ().materials;
-	Collider myCol = gameObject.AddComponent<BoxCollider> ();
-	_BoundsUp = myCol.bounds.max.y;
-	_BoundsDown = myCol.bounds.min.y;
-	for (int i = 0; i < myMat.Length; i++) {
-		myMat[i].SetFloat ("_BoundsUp", _BoundsUp);
-		myMat[i].SetFloat ("_BoundsDown", _BoundsDown);
-	}
 
-	Destroy (myCol);
+	ApplyTheVelocity();
+}
 
-
+public void ApplyTheVelocity(){
 	if (energie < 0f) {
 			energie = 0f;
 		}
@@ -44,32 +38,11 @@ void Start(){
 			energieNew = 0;
 		}
 		for (int i = 0; i < myMat.Length; i++) {			
-			myMat[i].SetFloat("_Size1", energieNew);
-			myMat[i].SetFloat("_Size2", energieNew*70f/100f);
-		}	
-		Vector3 velocity = direction * Time.deltaTime * energie/10;
-		rb.velocity = velocity;
-}
-
-
-/*void Update(){
-		if (energie < 0f) {
-			energie = 0f;
-		}
-		float energieNew = energie / 20f;
-		energieNew= Mathf.Log10 (energieNew)*3f;
-		if (energieNew < 0) {
-			energieNew = 0;
-		}
-		for (int i = 0; i < myMat.Length; i++) {			
-			myMat[i].SetFloat("_Size1", energieNew);
-			myMat[i].SetFloat("_Size2", energieNew*70f/100f);
+			myMat[i].SetFloat("_MKGlowTexStrength", energieNew);
 		}	
 		Vector3 velocity = direction * Time.deltaTime * energie;
 		rb.velocity = velocity;
-}*/
-
-
+}
 
 	void OnCollisionEnter(Collision col){
 		
@@ -92,6 +65,7 @@ void Start(){
 				}
 			}
 		}
+		ApplyTheVelocity();
 	}
 
 	void OnCollisionExit(Collision col){

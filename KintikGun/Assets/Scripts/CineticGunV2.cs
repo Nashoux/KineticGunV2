@@ -140,6 +140,7 @@ public class CineticGunV2 : MonoBehaviour {
 				Vector3 velocity = myBlock.direction * Time.deltaTime * myBlock.energie;
 				myBlock.rb.velocity = velocity;
 				myBlock.rb.angularVelocity = new Vector3(0,0,0);
+				myBlock.ApplyTheVelocity();
 			}
 		} else {
 			stocked = false;
@@ -156,6 +157,7 @@ public class CineticGunV2 : MonoBehaviour {
 				Vector3 velocity = myBlock.direction * Time.deltaTime * myBlock.energie;
 				myBlock.rb.velocity = velocity;
 				myBlock.rb.angularVelocity = new Vector3(0,0,0);
+				myBlock.ApplyTheVelocity();
 			}
 		}
 		#endregion
@@ -202,17 +204,7 @@ public class CineticGunV2 : MonoBehaviour {
 							if (myBlock.energie < 0f) {
 								myBlock.energie = 0f;
 							}
-							float energieNew = myBlock.energie / 20f;
-							energieNew= Mathf.Log10 (energieNew)*3f;
-							if (energieNew < 0) {
-								energieNew = 0;
-							}
-							for (int i = 0; i < myBlock.myMat.Length; i++) {			
-								myBlock.myMat[i].SetFloat("_Size1", energieNew);
-								myBlock.myMat[i].SetFloat("_Size2", energieNew*70f/100f);
-							}	
-							Vector3 velocity = myBlock.direction * Time.deltaTime * myBlock.energie;
-							myBlock.rb.velocity = velocity;				
+							myBlock.ApplyTheVelocity();		
 						}
 					}else{
 						if(Input.GetKeyDown (KeyCode.Joystick1Button4) || Input.GetKeyDown (KeyCode.A)){
@@ -324,17 +316,7 @@ public class CineticGunV2 : MonoBehaviour {
 					if (myBlock.energie < 0f) {
 								myBlock.energie = 0f;
 							}
-							float energieNew = myBlock.energie / 20f;
-							energieNew= Mathf.Log10 (energieNew)*3f;
-							if (energieNew < 0) {
-								energieNew = 0;
-							}
-							for (int i = 0; i < myBlock.myMat.Length; i++) {			
-								myBlock.myMat[i].SetFloat("_Size1", energieNew);
-								myBlock.myMat[i].SetFloat("_Size2", energieNew*70f/100f);
-							}	
-							Vector3 velocity = myBlock.direction * Time.deltaTime * myBlock.energie;
-							myBlock.rb.velocity = velocity;	
+							myBlock.ApplyTheVelocity();
 				}else{
 					if(lastInputTrigger <= 0.09f  || Input.GetKeyDown (KeyCode.E)){
 						Gun_Min_Energie_Event.start();
@@ -405,16 +387,11 @@ public class CineticGunV2 : MonoBehaviour {
 			}
 		}
 		#endregion
-
-
 	}
 
 	void OnCollisionEnter(){
 		delock ();
 	}
-
-
-
 
 	void delock(){
 		if (blockLock != null) {
@@ -423,8 +400,6 @@ public class CineticGunV2 : MonoBehaviour {
 			blockLock = null;
 		}
 	}
-
-
 
 	IEnumerator turnLeftUi(){
 		for (int i = 0; i < 8; i++) {

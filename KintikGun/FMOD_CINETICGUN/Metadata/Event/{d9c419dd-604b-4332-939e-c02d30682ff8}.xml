@@ -244,12 +244,7 @@
     </object>
     <object class="MixerBusEffectChain" id="{d2813d94-596c-441e-9bf6-eef4aca29f80}">
         <relationship name="effects">
-            <destination>{d00cd3d8-3e9a-4e27-b383-68a8a89ee020}</destination>
             <destination>{eb104def-3a1d-4e92-84fb-f3d5a1ac9f38}</destination>
-            <destination>{e9c0fe80-84ef-442a-9e36-311a63616864}</destination>
-            <destination>{65445205-1591-491c-8b45-88b0db24bad5}</destination>
-            <destination>{fb33cc35-9a39-4fe7-8e60-8803263ac7da}</destination>
-            <destination>{24cc92e4-d406-4fd4-b656-f255fe96be9f}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{1bcc515d-6a23-4d97-b241-8deeb4a28351}"/>
@@ -294,59 +289,7 @@
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{d00abd0c-6c78-4523-8926-ad263f3bc09d}"/>
-    <object class="DistortionEffect" id="{d00cd3d8-3e9a-4e27-b383-68a8a89ee020}">
-        <property name="level">
-            <value>0.100000009</value>
-        </property>
-        <relationship name="modulators">
-            <destination>{ed23c7c4-75a0-4327-a6f3-20aa34d8e097}</destination>
-        </relationship>
-    </object>
     <object class="MixerBusFader" id="{eb104def-3a1d-4e92-84fb-f3d5a1ac9f38}"/>
-    <object class="ChorusEffect" id="{e9c0fe80-84ef-442a-9e36-311a63616864}">
-        <property name="rate">
-            <value>0.74000001</value>
-        </property>
-        <property name="depth">
-            <value>100</value>
-        </property>
-        <property name="mix">
-            <value>4</value>
-        </property>
-    </object>
-    <object class="FlangerEffect" id="{65445205-1591-491c-8b45-88b0db24bad5}">
-        <property name="bypass">
-            <value>true</value>
-        </property>
-        <property name="rate">
-            <value>0.560000002</value>
-        </property>
-        <property name="mix">
-            <value>100</value>
-        </property>
-    </object>
-    <object class="SFXReverbEffect" id="{fb33cc35-9a39-4fe7-8e60-8803263ac7da}">
-        <property name="bypass">
-            <value>true</value>
-        </property>
-        <property name="decayTime">
-            <value>3700</value>
-        </property>
-        <property name="density">
-            <value>0</value>
-        </property>
-    </object>
-    <object class="ThreeEQEffect" id="{24cc92e4-d406-4fd4-b656-f255fe96be9f}">
-        <property name="midGain">
-            <value>-5.5</value>
-        </property>
-        <property name="highGain">
-            <value>-3</value>
-        </property>
-        <relationship name="modulators">
-            <destination>{648ce912-c75e-486c-ae7d-12be363526b4}</destination>
-        </relationship>
-    </object>
     <object class="MixerBusFader" id="{ec6dad02-6a82-4941-93b4-72956b1b0e85}"/>
     <object class="MixerBusFader" id="{124c94ae-c08b-485d-a5c4-2f90965d35f4}"/>
     <object class="MixerBusFader" id="{2fbb7568-58a6-493d-b7b2-68ac19a8824b}"/>
@@ -389,20 +332,4 @@
         </property>
     </object>
     <object class="MixerBusFader" id="{4d969b37-b460-483c-82b6-94ac0d49919d}"/>
-    <object class="RandomizerModulator" id="{ed23c7c4-75a0-4327-a6f3-20aa34d8e097}">
-        <property name="nameOfPropertyBeingModulated">
-            <value>level</value>
-        </property>
-        <property name="amount">
-            <value>16.5</value>
-        </property>
-    </object>
-    <object class="RandomizerModulator" id="{648ce912-c75e-486c-ae7d-12be363526b4}">
-        <property name="nameOfPropertyBeingModulated">
-            <value>highGain</value>
-        </property>
-        <property name="amount">
-            <value>22.7999992</value>
-        </property>
-    </object>
 </objects>
