@@ -53,7 +53,7 @@ using Random = UnityEngine.Random;
 
 
 
-	IEnumerator changeScene(){
+	IEnumerator ChangeSceneEnd(){
 		music_Event.stop (FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 		jingle2_Event.start ();
 		for (int i = 0; i < timer; i++) {
@@ -78,12 +78,25 @@ using Random = UnityEngine.Random;
 	}
 	IEnumerator justChangeScene(){
 		for (int i = 0; i < timer; i++) {
+			timer+=Time.deltaTime;
 			myImage.color = new Color(myImage.color.r,myImage.color.g,myImage.color.b, myImage.color.a- 1 / timer);
 			yield return new WaitForEndOfFrame ();
 		}
 		music_Event.start ();
 		yield return null;
 	}
+	IEnumerator ChangeSceneReload(){
+		for (float i = 0; i < 1; ) {
+			i+=Time.deltaTime;
+			myImage.color = new Color(myImage.color.r,myImage.color.g,myImage.color.b, i);
+			yield return new WaitForEndOfFrame ();
+		}
+		music_Event.start ();
+		SceneManager.LoadSceneAsync (SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+		yield return null;
+	}
+
+	bool dead = false;
 
 	[FMODUnity.EventRef]
 	public string jingle;
@@ -160,35 +173,39 @@ using Random = UnityEngine.Random;
 			rb.velocity = new Vector3(m_MoveDir.x+newVelocity.x, rb.velocity.y+newVelocity.y/100, m_MoveDir.z+newVelocity.z );
 		}
 
-
-		Collider[] myObjectCollision = Physics.OverlapCapsule(transform.position+new Vector3(0,1f,0),transform.position+new Vector3(0,-0.5f,0), 0.5f) ;
-		Vector3[] myObjectPosition = new Vector3[myObjectCollision.Length]; 
-		for( int i = 0; i < myObjectCollision.Length; i ++){
-			myObjectPosition [i] = myObjectCollision[i].transform.position - transform.position;
-		}
-
-		for (  int i = 0; i < myObjectCollision.Length; i ++){
-
-			if(myObjectPosition[i].x < 0 ){
-				for (  int y = i+1; y < myObjectCollision.Length; y ++){
-					if(myObjectPosition[y].x > 0 ){
-						Debug.Log("dead x");
-					}
-				}
+		if(!dead){
+			Collider[] myObjectCollision = Physics.OverlapCapsule(transform.position+new Vector3(0,1f,0),transform.position+new Vector3(0,-0.5f,0), 0.5f) ;
+			Vector3[] myObjectPosition = new Vector3[myObjectCollision.Length]; 
+			for( int i = 0; i < myObjectCollision.Length; i ++){
+				myObjectPosition [i] = myObjectCollision[i].transform.position - transform.position;
 			}
 
-			if(myObjectPosition[i].z < 0 ){
-				for (  int y = i+1; y < myObjectCollision.Length; y ++){
-					if(myObjectPosition[y].z > 0 ){
-						Debug.Log("dead z");
+			for (  int i = 0; i < myObjectCollision.Length; i ++){
+
+				if(myObjectPosition[i].x < 0 ){
+					for (  int y = i+1; y < myObjectCollision.Length; y ++){
+						if(myObjectPosition[y].x > 0 ){
+							StartCoroutine("ChangeSceneReload");
+							dead = true;
+						}
 					}
 				}
-			}
 
-			if(myObjectPosition[i].y > 0 ){
-				for (  int y = i+1; y < myObjectCollision.Length; y ++){
-					if(myObjectPosition[y].y < 0 ){
-						Debug.Log("dead y");
+				if(myObjectPosition[i].z < 0 ){
+					for (  int y = i+1; y < myObjectCollision.Length; y ++){
+						if(myObjectPosition[y].z > 0 ){
+							StartCoroutine("ChangeSceneReload");
+							dead = true;
+						}
+					}
+				}
+
+				if(myObjectPosition[i].y > 0 ){
+					for (  int y = i+1; y < myObjectCollision.Length; y ++){
+						if(myObjectPosition[y].y < 0 ){
+							StartCoroutine("ChangeSceneReload");
+							dead = true;
+						}
 					}
 				}
 			}
@@ -228,10 +245,15 @@ using Random = UnityEngine.Random;
 	}
 
 	void OnTriggerEnter(Collider col){
-		if (!isChangingScene && col.tag == "changeScene") {
+		if (!isChangingScene && col.tag == "ChangeSceneEnd") {
 			jingle2_Event.start ();  
 			isChangingScene = true;
-			StartCoroutine ("changeScene");
+			StartCoroutine ("ChangeSceneEnd");
+		}
+		if (!isChangingScene && col.tag == "ChangeScene") {
+			jingle2_Event.start ();  
+			isChangingScene = true;
+			StartCoroutine ("ChangeScene");
 		}
 	}
 

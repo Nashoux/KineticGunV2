@@ -363,25 +363,25 @@ public class CineticGunV2 : MonoBehaviour {
 		// Système de lock
 
 		if (Input.GetMouseButtonDown (2) || Input.GetKeyDown(KeyCode.JoystickButton9) ) {
-			if (blockLock == null) {
-				Gun_Lock_Event.start();
+				
 				RaycastHit hit; 
 				if (Physics.SphereCast (transform.position,castSize, Camera.main.transform.TransformDirection (Vector3.forward), out hit, Mathf.Infinity, myMask) && hit.collider.GetComponent<BlockAlreadyMovingV2> ()) {
+					Gun_Lock_Event.start();
 					//rb.useGravity = false;
 					blockLock = hit.collider.GetComponent<BlockAlreadyMovingV2> ();
 					blockLockDistanceBase = blockLock.transform.position - transform.position;
-					StartCoroutine("turnLeftUi");
-				}
+					if (blockLock == null){
+						StartCoroutine("turnLeftUi");
+					}
+				} else if (blockLock != null) {
+					Gun_Unlock_Event.start();
+					blockLock = null;
+					StartCoroutine("turnRightUi");
 
-			} else {
-				Gun_Unlock_Event.start();
-				blockLock = null;
-				StartCoroutine("turnRightUi");
-
-//				RaycastHit hit; 
-//				if (Physics.Raycast (transform.position, Camera.main.transform.TransformDirection (Vector3.forward), out hit, Mathf.Infinity, myMask) &&  hit.collider.GetComponent<BlockAlreadyMovingV2> ()) {
-//					blockLock = hit.collider.GetComponent<BlockAlreadyMovingV2> ();
-//				}
+	//				RaycastHit hit; 
+	//				if (Physics.Raycast (transform.position, Camera.main.transform.TransformDirection (Vector3.forward), out hit, Mathf.Infinity, myMask) &&  hit.collider.GetComponent<BlockAlreadyMovingV2> ()) {
+	//					blockLock = hit.collider.GetComponent<BlockAlreadyMovingV2> ();
+	//				}
 			}
 		}
 		#endregion
