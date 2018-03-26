@@ -181,35 +181,37 @@ using Random = UnityEngine.Random;
 			}
 
 			for (  int i = 0; i < myObjectCollision.Length; i ++){
-
-				if(myObjectPosition[i].x < 0 ){
-					for (  int y = i+1; y < myObjectCollision.Length; y ++){
-						if(myObjectPosition[y].x > 0 ){
-							StartCoroutine("ChangeSceneReload");
-							dead = true;
+				if (!myObjectCollision[i].isTrigger){
+					if(myObjectPosition[i].x < 0 ){
+						for (  int y = i+1; y < myObjectCollision.Length; y ++){
+							if(myObjectPosition[y].x > 0 && !myObjectCollision[y].isTrigger){
+								StartCoroutine("ChangeSceneReload");
+								dead = true;
+							}
 						}
 					}
-				}
 
-				if(myObjectPosition[i].z < 0 ){
-					for (  int y = i+1; y < myObjectCollision.Length; y ++){
-						if(myObjectPosition[y].z > 0 ){
-							StartCoroutine("ChangeSceneReload");
-							dead = true;
+					if(myObjectPosition[i].z < 0 ){
+						for (  int y = i+1; y < myObjectCollision.Length; y ++){
+							if(myObjectPosition[y].z > 0 && !myObjectCollision[y].isTrigger){
+								StartCoroutine("ChangeSceneReload");
+								dead = true;
+							}
 						}
 					}
-				}
 
-				if(myObjectPosition[i].y > 0 ){
-					for (  int y = i+1; y < myObjectCollision.Length; y ++){
-						if(myObjectPosition[y].y < 0 ){
-							StartCoroutine("ChangeSceneReload");
-							dead = true;
+					if(myObjectPosition[i].y > 0 ){
+						for (  int y = i+1; y < myObjectCollision.Length; y ++){
+							if(myObjectPosition[y].y < 0 && !myObjectCollision[y].isTrigger){
+								StartCoroutine("ChangeSceneReload");
+								dead = true;
+							}
 						}
 					}
 				}
 			}
 		}
+		Debug.Log(dead);
 
 	}
         private void FixedUpdate(){
